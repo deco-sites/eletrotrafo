@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "type": "website",
+    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/acdad346-f26d-4cc6-a28c-10b6d87650b9",
+    "title": "Allever",
+    "jsonLDs": [],
+    "noIndexing": false,
+    "description": "Improve your page performance with deco.cx ",
+    "titleTemplate": "%s | Allever",
+    "descriptionTemplate": "%s | Deco.cx",
+    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/089e6d24-1be6-44a3-a736-b209a82ae728",
+    "themeColor": "#123ADD"
+  },
+  "theme": {
+    "__resolveType": "Deco"
+  },
+  "global": [
+    {
+      "__resolveType": "htmx/sections/htmx.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Analytics/Analytics.tsx",
+      "dangerouslyRunOnMainThread": true,
+      "trackingIds": []
+    },
+    {
+      "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Session.tsx",
+      "minicart": null,
+      "wishlist": null,
+      "mode": "lazy",
+      "user": null
+    }
+  ],
+  "routes": [
+    {
+      "__resolveType": "vtex/loaders/proxy.ts",
+      "extraPathsToProxy": [],
+      "includeSiteMap": [],
+      "excludePathsFromDecoSiteMap": []
+    },
+    {
+      "__resolveType": "website/loaders/pages.ts"
+    },
+    {
+      "__resolveType": "website/loaders/redirects.ts"
+    }
+  ],
+  "caching": {
+    "directives": []
+  },
+  "commerce": {
+    "platform": "vtex",
+    "defaultSegment": {
+      "channelPrivacy": "public"
+    },
+    "salesChannel": "1"
+  },
+  "platform": "vtex",
+  "__resolveType": "site/apps/site.ts",
+  "firstByteThresholdMS": true,
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "htmx"
+  },
+  "vtex": {
+    "sp": {},
+    "io": {},
+    "vcs": {},
+    "api": {},
+    "my": {}
+  },
+  "newsFlag": "40",
+  "shelfFlag1": "163",
+  "promoFlag": "157",
+  "internationalFlag": "160",
+  "minicartSuggestion": "159"
+}

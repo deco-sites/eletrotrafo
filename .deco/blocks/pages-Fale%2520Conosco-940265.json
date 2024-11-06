@@ -1,0 +1,42 @@
+{
+  "name": "Sobre",
+  "path": "/sobre",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/About.tsx",
+      "title": "Sobre a",
+      "html": "<p><span style=\"font-size: 12pt;\" data-mce-style=\"font-size: 12pt;\">Somos um marketplace que carrega a nossa missão no nome: <strong>ter tudo, sempre!</strong></span></p><p><span style=\"font-size: 12pt;\" data-mce-style=\"font-size: 12pt;\">Para nos guiar em um sentido só, entregar o que está estampado no nosso DNA!</span></p>",
+      "socials": [
+        {
+          "title": "Siga a [allever] nas redes sociais!",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/e1261d5e-5119-4649-8477-dafc77c93c43"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/09d5fba7-23be-45c1-84be-7a32b40e8f3d"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/049c05ec-4787-4ed1-bf08-371b999413ee"
+        }
+      ]
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

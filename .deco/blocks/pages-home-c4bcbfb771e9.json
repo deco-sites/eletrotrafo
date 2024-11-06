@@ -1,0 +1,817 @@
+{
+  "name": "Home",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Images/Carousel.tsx",
+      "images": [
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/18bae574-1324-4994-9929-5cf47fddbf73",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://placehold.co/640x800"
+        }
+      ],
+      "preload": true
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Category/CarouselCategory.tsx",
+      "title": "Compre Por Categorias",
+      "category": [
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria 1",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        },
+        {
+          "image": "https://placehold.co/113x105",
+          "Link": "/",
+          "Label": "Categoria",
+          "width": 113,
+          "height": 105,
+          "desktop": {
+            "Width": 113,
+            "Height": 105
+          },
+          "mobile": {
+            "Width": 113,
+            "Height": 105
+          },
+          "Alt": "categoria"
+        }
+      ],
+      "Title": "Compre Por Categorias",
+      "layout": "Categoria",
+      "visibleItems": 8,
+      "categories": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Category/CategoryBanner.tsx",
+      "banners": [
+        {
+          "image": {
+            "desktop": "https://placehold.co/1440x285",
+            "mobile": "https://placehold.co/640x504",
+            "alt": "banner 100% de marca x"
+          },
+          "matcher": "/"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithTimer.tsx",
+        "title": "Teste do Timer",
+        "cta": "Confira",
+        "hideLabel": true,
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "price:desc",
+            "collection": "149",
+            "count": 10,
+            "hideUnavailableItems": true
+          }
+        },
+        "expireAt": "2024-12-01T02:59:00.000Z",
+        "displayOfferTag": true
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/SecondVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 360,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 300
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 360,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 300
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 360,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 300
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 360,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 300
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
+      "Label": "algum sub titulo",
+      "product": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "/tomada-antena-tv-coaxial-orion-–-schneider-14172/p"
+        },
+        "similars": false
+      },
+      "expireAt": "2024-12-01T02:59:00.000Z"
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "term": "tv",
+          "count": 6,
+          "query": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/FirstVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 450,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 640,
+            "Height": 504
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 450,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 317,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 450,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 317,
+            "Height": 350
+          }
+        }
+      ],
+      "slide": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 1410,
+            "Height": 439
+          },
+          "mobile": {
+            "Width": 317,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 1410,
+            "Height": 439
+          },
+          "mobile": {
+            "Width": 317,
+            "Height": 350
+          }
+        }
+      ],
+      "bannerFull": {
+        "desktop": {
+          "Width": 1410,
+          "Height": 144
+        },
+        "mobile": {
+          "Width": 640,
+          "Height": 144
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:asc",
+          "query": "fone de ouvido",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      },
+      "title": "Vitrine 1",
+      "cta": "#"
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/ThirdVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 872,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 450,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 450,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 872,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "query": "fone de ouvido",
+          "sort": "price:asc",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "query": "fone de ouvido",
+          "sort": "price:asc",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/FourthVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Height": 350,
+            "Width": 872
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 500,
+            "Height": 398
+          },
+          "mobile": {
+            "Width": 309,
+            "Height": 350
+          }
+        }
+      ],
+      "bannerFull": {
+        "desktop": {
+          "Width": 1410,
+          "Height": 144
+        },
+        "mobile": {
+          "Width": 640,
+          "Height": 250
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "query": "fone de ouvido",
+          "sort": "price:asc",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/FifthVariation.tsx",
+      "slide": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 1410,
+            "Height": 439
+          },
+          "mobile": {
+            "Width": 356,
+            "Height": 213
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 1410,
+            "Height": 439
+          },
+          "mobile": {
+            "Width": 356,
+            "Height": 213
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "query": "fone de ouvido",
+          "sort": "price:asc",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/SixthVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Height": 451,
+            "Width": 647
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 380
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Height": 213,
+            "Width": 747
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 250
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Height": 213,
+            "Width": 747
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 250
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Vitrine 1",
+      "cta": "#",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "query": "fone de ouvido",
+          "sort": "price:asc",
+          "count": 12,
+          "fuzzy": "automatic",
+          "term": "tv"
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Images/SeventhVariation.tsx",
+      "items": [
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 555,
+            "Height": 505
+          },
+          "mobile": {
+            "Width": 600,
+            "Height": 359
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 412,
+            "Height": 239
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 247
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 412,
+            "Height": 239
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 247
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 412,
+            "Height": 239
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 247
+          }
+        },
+        {
+          "Loading": "eager",
+          "desktop": {
+            "Width": 412,
+            "Height": 239
+          },
+          "mobile": {
+            "Width": 300,
+            "Height": 247
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Category/CarouselBrand.tsx",
+        "title": "Compre por Marcas",
+        "brands": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/"
+}

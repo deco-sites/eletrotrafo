@@ -1,0 +1,18 @@
+{
+  "__resolveType": "site/apps/deco/vtex.ts",
+  "defaultSegment": {
+    "channelPrivacy": "public"
+  },
+  "platform": "vtex",
+  "publicUrl": "secure.allever.com",
+  "account": "allever",
+  "appKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "676c47712b2bb7350c8e5825de57efe3d317caa0e939f2133867cb61d9d7d157"
+  },
+  "appToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "5f739bd71fadd5822dc051e5a3a1136a2fe0610ecf0e74fd3788ea385fb2af71bf4f2038d181f4eb58772e87088c7b8726fdc6ebd3d0cd45db481f573462180c51426735c8d975c8dc001b5188bf2b8542f3103cf210547b43ecd04a389928445f03ef5b52d8172f82c279b375b49dafb4b392a17dcc2a1ceec8ef257cd073f00050531573580a14bcb7aa5c5f904e5a"
+  },
+  "salesChannel": "1"
+}

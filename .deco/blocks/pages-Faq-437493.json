@@ -1,0 +1,54 @@
+{
+  "name": "Faq",
+  "path": "/faq",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Title.tsx",
+      "title": "Faq",
+      "breadcrumb": "Atendimento"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Faq.tsx",
+      "faq": [
+        {
+          "questions": [
+            {
+              "question": "Licitação, pregão eletrônico e edital.",
+              "response": "<p><span style=\"color: rgb(136, 136, 136);\" data-mce-style=\"color: rgb(136, 136, 136);\">A <span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\">[allever] </span>não participa de licitações, pregão eletrônico e editais, etc.<br>A unica forma de comprar com a <span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\">[allever]</span> é através do nosso site, com pagamento no checkout.<br>Não aceitamos nenhuma outra condição de pagamento. <br></span></p><p><span style=\"color: rgb(136, 136, 136);\" data-mce-style=\"color: rgb(136, 136, 136);\">Relativo a<br><br>CNPJ</span></p>"
+            },
+            {
+              "question": "Como falar com a [allever]?",
+              "response": "A [allever] não participa de licitações, pregão eletrônico e editais, etc. A unica forma de comprar com a [allever] é através do nosso site, com pagamento no checkout. Não aceitamos nenhuma outra condição de pagamento.  Relativo a CNPJ"
+            }
+          ],
+          "title": "Dúvidas em Geral"
+        },
+        {
+          "questions": [
+            {
+              "question": "Quando um produto não está elegível para ser trocado ou devolvido?",
+              "response": "A [allever] não participa de licitações, pregão eletrônico e editais, etc. A unica forma de comprar com a [allever] é através do nosso site, com pagamento no checkout. Não aceitamos nenhuma outra condição de pagamento.  Relativo a CNPJ"
+            }
+          ],
+          "title": "Trocas e devoluções"
+        }
+      ]
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

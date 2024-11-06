@@ -1,0 +1,106 @@
+{
+  "name": "Venda na Allever",
+  "path": "/venda-na-allever",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/ImageComponent.tsx",
+      "desktop": {
+        "Image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/b7441d81-301d-49b5-aae2-ffcdaef9b421"
+      },
+      "mobile": {
+        "Image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/824c6af0-192c-49fd-b3c7-2b5c798fa334"
+      },
+      "Loading": "lazy",
+      "Alt": "Banner de da marca allever"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/FirstSeller.tsx",
+      "firstSection": {
+        "title": "<p><strong>[Vantagens]</strong></p><p>E com enorme prazer que recebemos você aqui!<br>Cique no botão abaixo para realizar seu cadastro no nosso banco de talentos.</p>",
+        "cards": [
+          {
+            "content": "+26"
+          },
+          {
+            "content": "+26"
+          },
+          {
+            "content": "+26"
+          }
+        ],
+        "firstCard": {
+          "content": "01",
+          "label": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Atendemos os <strong>26<br></strong><strong>estados brasileiros<br></strong> além do Distrito Federal</span></p>"
+        },
+        "secondCard": {
+          "content": "02",
+          "label": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\"><strong>Zero investimento*<br></strong> Você só paga comissão sobre </span><br><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">o que vender</span></p>"
+        },
+        "thirdCard": {
+          "content": "03",
+          "label": "<p><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\"><strong>5% de comissão*<br></strong></span><span style=\"font-size: 14pt;\" data-mce-style=\"font-size: 14pt;\">Nos primeiros 3 meses</span></p>"
+        }
+      },
+      "firstCard": {
+        "content": "+26",
+        "label": "<p>Atendemos os <strong>26 estados brasileiros</strong> </p><p>além do Distrito Federal</p>"
+      },
+      "secondCard": {
+        "content": "R$",
+        "label": "<p><strong>Zero investimento*</strong> </p><p>Você só paga comissão sobre o que vender</p>"
+      },
+      "thirdCard": {
+        "content": "5%",
+        "label": "<p><strong>5% de comissão*</strong> </p><p>Nos primeiros 3 meses</p>"
+      },
+      "title": "<h1><span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\">[Vantagens]</span></h1><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">E com enorme prazer que recebemos você aqui!</span></p><p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Cique no botão abaixo para realizar seu cadastro no nosso banco de talentos</span><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\" data-mce-style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">.<br data-mce-bogus=\"1\"></span></p>"
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "xlarge"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/TimelineSeller.tsx",
+      "timeline": {
+        "firstLabel": "Faça seu cadastro",
+        "secondLabel": "Assine o contrato",
+        "thirdLabel": "Conecte seus produtos"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "xlarge"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/SecondSeller.tsx",
+      "secondSection": {
+        "title": "<p>Impulsione suas [Vendas]</p>",
+        "button": {
+          "label": "<p>Venda na [allever]</p>"
+        }
+      },
+      "text": "<p>Prezado(a) Seller,</p><p>Nosso objetivo é criar uma comunidade de vendedores e compradores onde todos possam se beneficiar de uma experiência de compra e venda confiável, fácil e gratificante.</p><p>Somos uma plataforma online que reúne diversos vendedores de produtos em um só lugar, oferecendo aos compradores uma experiência única e conveniente. Nossa missão é ajudar a expandir seus negócios, conectando você com compradores em potencial em todo o mundo.</p><p>Nosso Marketplace oferece diversas vantagens para os vendedores. Além de uma ampla base de clientes, temos uma equipe dedicada a fornecer suporte e assistência em todas as etapas do processo de venda. Nós também oferecemos um sistema de pagamentos e split, seguro e eficiente, que garante que os vendedores recebam o pagamento de forma automática e segura.</p><p>Com um alcance cada vez maior, nosso Marketplace oferece a você a oportunidade de aumentar sua base de clientes e, consequentemente, suas vendas uma maneira eficaz.</p><p>Além disso, oferecemos um suporte dedicado para ajudá-lo(a) em todos os aspectos do processo de venda, estamos aqui para ajudá-lo(a) em cada etapa.</p><p>Nosso objetivo é oferecer uma plataforma segura, fácil e gratificante para os vendedores, e uma ótima experiência de compra para os consumidores. Gostaríamos muito de tê-lo(a) como parceiro(a) em nossa jornada e esperamos que você se junte a nós.</p><p>Não perca esta oportunidade de fazer parte da nossa comunidade de vendedores de sucesso. Junte-se a nós hoje mesmo e comece a expandir seus negócios.</p><p>Para se cadastrar, basta clicar no botão abaixo.</p><p>Se tiver alguma dúvida, não hesite em entrar em contato conosco. Estamos ansiosos para trabalhar com você!</p><p><br>Atenciosamente,</p><p><span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\"><strong>[allever]</strong></span></p>",
+      "button": {
+        "label": "<p><span style=\"color: rgb(255, 255, 255);\" data-mce-style=\"color: rgb(255, 255, 255);\">Venda na</span> <span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\">[allever]</span></p>",
+        "link": "#"
+      },
+      "title": "<h2>Impulsione suas <span style=\"color: rgb(18, 58, 221);\" data-mce-style=\"color: rgb(18, 58, 221);\">[Vendas]</span></h2>"
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

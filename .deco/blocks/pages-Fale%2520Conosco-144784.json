@@ -1,0 +1,29 @@
+{
+  "name": "Fale Conosco",
+  "path": "/fale-conosco",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Title.tsx",
+      "title": "Fale conosco"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Form.tsx"
+    },
+    {
+      "__resolveType": "Deals"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

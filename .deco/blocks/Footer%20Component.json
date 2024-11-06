@@ -1,0 +1,257 @@
+{
+  "__resolveType": "site/sections/Footer/Footer.tsx",
+  "links": [
+    {
+      "children": [
+        {
+          "title": "Sobre a [allever]",
+          "href": "/sobre"
+        },
+        {
+          "title": "Termos e condições",
+          "href": "/termos-e-condicoes"
+        }
+      ],
+      "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever",
+      "title": "Institucional"
+    },
+    {
+      "title": "Atendimento",
+      "children": [
+        {
+          "title": "Fale Conosco",
+          "href": "/fale-conosco"
+        },
+        {
+          "title": "Dúvidas Frequentes",
+          "href": "/faq"
+        },
+        {
+          "title": "Política de Cookie",
+          "href": "https://www.iubenda.com/privacy-policy/51543722/cookie-policy"
+        },
+        {
+          "title": "Trabalhe Conosco",
+          "href": "/trabalhe-conosco"
+        },
+        {
+          "title": "Venda na [allever]",
+          "href": "/venda-na-allever"
+        },
+        {
+          "title": "Trocas e Devoluções",
+          "href": "https://allever.troque.app.br/"
+        }
+      ],
+      "href": "/fale-conosco"
+    },
+    {
+      "title": "Conta",
+      "children": [
+        {
+          "title": "Minha conta",
+          "href": "/account"
+        },
+        {
+          "title": "Meus pedidos",
+          "href": "/account/#/orders"
+        },
+        {
+          "title": "Favoritos",
+          "href": "/account#/wishlist"
+        }
+      ],
+      "href": "#"
+    },
+    {
+      "title": "Marcas mais buscadas",
+      "children": [
+        {
+          "title": "Gopro",
+          "href": "#"
+        },
+        {
+          "title": "Nintendo",
+          "href": "#"
+        },
+        {
+          "title": "Xiomi",
+          "href": "#"
+        },
+        {
+          "title": "Philips Walita",
+          "href": "#"
+        },
+        {
+          "title": "Philips",
+          "href": "#"
+        },
+        {
+          "title": "Sony",
+          "href": "#"
+        },
+        {
+          "title": "Nikon",
+          "href": "#"
+        },
+        {
+          "title": "Canon",
+          "href": "#"
+        },
+        {
+          "title": "Motorola",
+          "href": "#"
+        },
+        {
+          "title": "Multi",
+          "href": "#"
+        }
+      ],
+      "href": "#"
+    },
+    {
+      "children": [
+        {
+          "title": "Acesse nossa área de atendimento",
+          "href": "/sac"
+        }
+      ],
+      "title": "Sac"
+    }
+  ],
+  "social": [
+    {
+      "alt": "Instagram",
+      "href": "https://www.instagram.com/allever.store/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6"
+    },
+    {
+      "alt": "X",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/e1261d5e-5119-4649-8477-dafc77c93c43",
+      "href": "https://x.com/allever_store"
+    },
+    {
+      "alt": "linkedin",
+      "href": "https://www.linkedin.com/company/allever/",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/8d8afe41-92e0-4f58-9476-b62b4e564e66/XMLID_801_.svg",
+      "title": "Linkedin"
+    },
+    {
+      "alt": "facebook",
+      "href": "https://www.facebook.com/allever.store",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/049c05ec-4787-4ed1-bf08-371b999413ee"
+    }
+  ],
+  "paymentMethods": {
+    "0": {
+      "alt": "Visa",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/366fdd13-128f-4b25-857d-ef02a8dfebbc"
+    },
+    "1": {
+      "alt": "Mastercard",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/c8c528ca-f983-4f51-a429-1bd7eec794c4"
+    },
+    "2": {
+      "alt": "Pix",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/cb3cf85e-9c15-4d38-b1fa-ef184c6fd3a8",
+      "href": "#"
+    },
+    "title": "Formas de Pagamento",
+    "paymentMethods": [
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/366fdd13-128f-4b25-857d-ef02a8dfebbc",
+        "alt": "Visa"
+      },
+      {
+        "alt": "Mastercard",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/c8c528ca-f983-4f51-a429-1bd7eec794c4"
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/cb3cf85e-9c15-4d38-b1fa-ef184c6fd3a8",
+        "alt": "Pix"
+      }
+    ]
+  },
+  "policies": [
+    {
+      "title": "Privacy Policy",
+      "href": "#"
+    },
+    {
+      "title": "Terms and Conditions",
+      "href": "#"
+    },
+    {
+      "title": "Cookies Policy",
+      "href": "#"
+    }
+  ],
+  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/acdad346-f26d-4cc6-a28c-10b6d87650b9",
+  "trademark": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
+  "service": {
+    "title": "SAC",
+    "label": "Acesse nossa área de atendimento",
+    "button": {
+      "label": "Atendimento",
+      "link": "https://sac.allever.com/hc/pt-br"
+    }
+  },
+  "copyright": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
+  "certified": {
+    "0": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6cf82172-b8fe-4e7c-85c3-7779f0b4ee09",
+      "title": "Selo reclame aqui",
+      "height": 67,
+      "width": 200
+    },
+    "1": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/72aeae9f-c846-4a17-b650-fc384f90dab1",
+      "title": "Safe Browsing",
+      "width": 104,
+      "height": 32
+    },
+    "2": {
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/680d5a5e-0f85-459a-9134-b48158a2d272",
+      "width": 50,
+      "height": 53,
+      "title": "Selo Confi"
+    },
+    "3": {
+      "title": "Selo Lets Encrypt",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/91588077-b0db-42a2-9c26-231de0e6c885",
+      "width": 130,
+      "height": 29
+    },
+    "title": "Certificados",
+    "certifieds": [
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/6d5ae7c2-de9a-4f63-a3c8-4710c55a14aa",
+        "alt": "Lets Encrypt selo",
+        "width": 135,
+        "height": 32,
+        "link": "https://letsencrypt.org/"
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/82977f72-d198-400f-acc3-e641be10eec2",
+        "width": 104,
+        "height": 32,
+        "alt": "Google Browsing selo",
+        "link": "https://transparencyreport.google.com/safe-browsing/search?url=www.allever.com"
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/680d5a5e-0f85-459a-9134-b48158a2d272",
+        "width": 50,
+        "height": 52,
+        "alt": "Confi selo",
+        "link": "https://confi.com.vc/lojas-confiaveis/detalhes?id=130774"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/f7fcaadf-5692-484d-a526-c1b0092d90a3/pci.png",
+        "alt": "PCI VTEX",
+        "width": 69,
+        "height": 42
+      }
+    ],
+    "hideSeal": false
+  }
+}
