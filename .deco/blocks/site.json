@@ -1,15 +1,15 @@
 {
   "seo": {
     "type": "website",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/acdad346-f26d-4cc6-a28c-10b6d87650b9",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/089321b4-b628-4c2a-8bb4-ab87919cbe33/logo.svg",
     "title": "Allever",
     "jsonLDs": [],
     "noIndexing": false,
     "description": "Improve your page performance with deco.cx ",
     "titleTemplate": "%s | Allever",
     "descriptionTemplate": "%s | Deco.cx",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/089e6d24-1be6-44a3-a736-b209a82ae728",
-    "themeColor": "#123ADD"
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/1c846a7d-728f-45d1-ad1e-2bf36ba52003/favicon.ico",
+    "themeColor": "#163970"
   },
   "theme": {
     "__resolveType": "Deco"
