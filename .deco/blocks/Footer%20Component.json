@@ -4,64 +4,74 @@
     {
       "children": [
         {
-          "title": "Sobre a [allever]",
-          "href": "/sobre"
-        },
-        {
-          "title": "Termos e condições",
-          "href": "/termos-e-condicoes"
-        }
-      ],
-      "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever",
-      "title": "Institucional"
-    },
-    {
-      "title": "Atendimento",
-      "children": [
-        {
           "title": "Fale Conosco",
           "href": "/fale-conosco"
         },
         {
-          "title": "Dúvidas Frequentes",
-          "href": "/faq"
+          "href": "/faq",
+          "title": "FAQ"
         },
         {
-          "title": "Política de Cookie",
-          "href": "https://www.iubenda.com/privacy-policy/51543722/cookie-policy"
+          "href": "/politica-de-pagamentos",
+          "title": "Política de pagamento"
         },
         {
-          "title": "Trabalhe Conosco",
-          "href": "/trabalhe-conosco"
-        },
-        {
-          "title": "Venda na [allever]",
-          "href": "/venda-na-allever"
+          "title": "Prazos de Entrega",
+          "href": "/prazos-de-entrega"
         },
         {
           "title": "Trocas e Devoluções",
           "href": "https://allever.troque.app.br/"
         }
       ],
-      "href": "/fale-conosco"
+      "href": "/fale-conosco",
+      "title": "Atendimento"
     },
     {
-      "title": "Conta",
+      "title": "Institucional",
       "children": [
         {
-          "title": "Minha conta",
-          "href": "/account"
+          "title": "Quem somos",
+          "href": "/sobre"
         },
         {
-          "title": "Meus pedidos",
-          "href": "/account/#/orders"
+          "title": "Política de Segurança",
+          "href": "/politica-de-privacidade-e-seguranca"
         },
         {
-          "title": "Favoritos",
-          "href": "/account#/wishlist"
+          "title": "Termos de Uso",
+          "href": "termos-e-condicoes-de-uso-do-site"
+        },
+        {
+          "title": "Área do colaborador"
+        },
+        {
+          "title": "Trabalhe Conosco",
+          "href": "/trabalhe-conosco"
+        },
+        {
+          "title": "Lojas",
+          "href": "/Lojas"
         }
       ],
-      "href": "#"
+      "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever"
+    },
+    {
+      "title": "Fale conosco",
+      "children": [
+        {
+          "title": "(43) 3520-500"
+        },
+        {
+          "title": "08:00 às 18:00 segunda a sexta"
+        },
+        {
+          "title": "08:00 às 12:00 aos sábados"
+        },
+        {
+          "title": "faleconosco@eletrotrafo.com.br"
+        }
+      ]
     },
     {
       "title": "Marcas mais buscadas",
@@ -108,15 +118,6 @@
         }
       ],
       "href": "#"
-    },
-    {
-      "children": [
-        {
-          "title": "Acesse nossa área de atendimento",
-          "href": "/sac"
-        }
-      ],
-      "title": "Sac"
     }
   ],
   "social": [
