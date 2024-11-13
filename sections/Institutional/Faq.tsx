@@ -6,14 +6,9 @@ interface Faq {
   title?: string;
   /** @titleBy title */
   questions?: {
-    /**
-     * @format html
-     */
-    question?: RichText ;
-    /**
-     * @format html
-     */
-    response?: RichText ;
+   
+    question?: RichText;
+    response?: RichText;
   }[];
 }
 
