@@ -9,7 +9,7 @@ const Text = ({ html }: Props) => {
     <>
       {html && (
         <div
-          class="fluid-text text-[12px] lg:text-[14px] mb-8 container px-5"
+          class="fluid-text text-xs lg:text-sm mb-8 container px-5"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
