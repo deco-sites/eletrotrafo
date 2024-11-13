@@ -147,7 +147,7 @@ interface Certified {
 function CertifiedComponent({ title, certifieds }: CertifiedProps) {
   return (
     <div class="">
-      {title && <p class="text-base font-normal mb-[21px]">{title}</p>}
+      {title && <p class="text-base font-normal mb-[10px]">{title}</p>}
       <div class="flex flex-col  gap-3">
         <div class="flex flex-row gap-4">
           {certifieds?.slice(0, 2).map((
@@ -402,12 +402,6 @@ function Footer(
                         </ul>
                       </div>
                     )}
-                    {links[3] && (
-                      <Payments
-                        title="Formas de Pagamento"
-                        paymentMethods={paymentMethods?.paymentMethods}
-                      />
-                    )}
                   </li>
 
                   <li class="flex flex-col gap-4">
@@ -435,26 +429,27 @@ function Footer(
                               ))}
                           </ul>
                         </div>
-                        <div class="mb-[21px]">
-                          {certified && (
-                            <CertifiedComponent
-                              title={certified?.title}
-                              certifieds={certified?.certifieds}
-                            />
-                          )}
-                        </div>
                       </>
                     )}
                   </li>
+                  <li>
+                    {links[3] && (
+                      <div class="mb-[21px]">
+                        <Payments
+                          title="Formas de Pagamento"
+                          paymentMethods={paymentMethods?.paymentMethods}
+                        />
+                      </div>
+                    )}
 
-                  <li class="flex flex-col gap-4">
-                    <>
-                      <Service
-                        title={service?.title}
-                        label={service?.label}
-                        button={service?.button}
-                      />
-                    </>
+                    {certified && (
+                      <div class="mb-[21px]">
+                        <CertifiedComponent
+                          title={certified?.title}
+                          certifieds={certified?.certifieds}
+                        />
+                      </div>
+                    )}
                   </li>
                 </ul>
               </div>
