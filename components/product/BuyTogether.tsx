@@ -170,7 +170,9 @@ export default function BuyTogether({
             id="buy-together"
             class="container px-0 lg:px-5 mb-3 mt-12 lg:my-12"
           >
-            <h3 class="text-2xl font-semibold mb-4 lg:mb-5 px-5 lg:px-0">Compre Junto</h3>
+            <h3 class="text-2xl font-semibold mb-4 lg:mb-5 px-5 lg:px-0">
+              Compre Junto
+            </h3>
             <div class="flex items-center gap-4 overflow-x-auto">
               <div
                 class="relative ml-5 lg:ml-0"

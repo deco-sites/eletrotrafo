@@ -52,7 +52,9 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
       <dialog id="payment-methods" class="modal">
         <div class="modal-box bg-white">
           <form method="dialog">
-            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
           </form>
           <h3 class="font-semibold text-base text-black mb-4">
             Métodos de <span class="text-primary">[pagamento]</span>
@@ -72,7 +74,9 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                     content?.classList.remove("hidden");
                     otherContent?.classList.add("hidden");
                     otherContent?.classList.remove("flex");
-                    const pixButton = document.querySelector("button#pix > div");
+                    const pixButton = document.querySelector(
+                      "button#pix > div",
+                    );
                     const installmentsButton = document.querySelector(
                       "button#installments > div",
                     );
@@ -83,7 +87,12 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                   })}
                 >
                   <div class="w-20 h-20 flex items-center justify-center border-2 border-primary rounded-full">
-                    <Icon id="pix" width={46} height={50} class="-mr-[3px] -mb-[2px]" />
+                    <Icon
+                      id="pix"
+                      width={46}
+                      height={50}
+                      class="-mr-[3px] -mb-[2px]"
+                    />
                   </div>
                   Pix
                 </button>
@@ -110,7 +119,11 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                   installmentsButton?.classList.remove("border-dark-gray");
                 })}
               >
-                <div class={`w-20 h-20 flex items-center justify-center border-2 border-dark-gray rounded-full ${!hasPixDiscount && "!border-primary"}`}>
+                <div
+                  class={`w-20 h-20 flex items-center justify-center border-2 border-dark-gray rounded-full ${
+                    !hasPixDiscount && "!border-primary"
+                  }`}
+                >
                   <Icon id="credit-card" width={45} height={35} />
                 </div>
                 Cartão de Crédito
@@ -128,8 +141,8 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                     finalizar o processo de compra.
                   </p>
                   <p class="text-xs text-gray-600 font-semibold max-w-xs">
-                    - O prazo de validade da chave é de X minutos. Em caso de não
-                    pagamento o pedido será cancelado.
+                    - O prazo de validade da chave é de X minutos. Em caso de
+                    não pagamento o pedido será cancelado.
                   </p>
                   <p class="text-xs text-gray-600 font-semibold max-w-xs">
                     - O prazo de entrega começa a contar após a confirmação do
@@ -137,7 +150,10 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                   </p>
                 </div>
               )}
-              <div id="installments" class={`hidden ${!hasPixDiscount && "!flex"}`}>
+              <div
+                id="installments"
+                class={`hidden ${!hasPixDiscount && "!flex"}`}
+              >
                 <table class="table table-xs w-full">
                   <thead>
                     <tr>

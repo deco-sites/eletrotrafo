@@ -191,7 +191,8 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             </div>
           ))}
         </div>
-        {/* <div id="ra-verified-seal" class="pb-4" />
+        {
+          /* <div id="ra-verified-seal" class="pb-4" />
         <script
           type="text/javascript"
           defer
@@ -206,14 +207,16 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               script.setAttribute("data-target", "ra-verified-seal");
               script.setAttribute("data-model", "2");
               document.body.appendChild(script);
-          
+
               return () => {
                 document.body.removeChild(script);
               };
             })
           }}
-        /> */}
-        {/* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed" />
+        /> */
+        }
+        {
+          /* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed" />
         <script
           type="text/javascript"
           defer
@@ -227,7 +230,8 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               document.body.appendChild(script);
             })
           }}
-        /> */}
+        /> */
+        }
       </div>
     </div>
   );

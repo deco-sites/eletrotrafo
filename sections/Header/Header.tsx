@@ -126,7 +126,12 @@ const Desktop = ({ logo, searchbar }: Props) => (
         />
 
         <div class="main-logo">
-          <Logo src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+          <Logo
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+          />
         </div>
 
         <div class="flex gap-4 items-center place-self-end">
@@ -195,7 +200,11 @@ const Mobile = ({ logo, searchbar }: Props) => (
         </label>
 
         {logo && (
-          <a href="/" aria-label="Store logo" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <a
+            href="/"
+            aria-label="Store logo"
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
             <Image src={logo.src} alt={logo.alt} width={94} height={21} />
           </a>
         )}

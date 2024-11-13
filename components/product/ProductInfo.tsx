@@ -1,4 +1,4 @@
-import { ProductDetailsPage, ImageObject } from "apps/commerce/types.ts";
+import { ImageObject, ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
@@ -45,23 +45,44 @@ function ShareModal() {
       <dialog id="share_product" class="modal">
         <div class="modal-box">
           <form method="dialog">
-            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
           </form>
           <div class="text-base font-semibold mb-5">Compartilhar</div>
           <div class="flex items-center gap-3 flex-wrap">
-            <a id="share-x" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary" target="_blank">
+            <a
+              id="share-x"
+              class="flex items-center justify-center w-14 h-14 rounded-full border border-primary"
+              target="_blank"
+            >
               <Icon id="x-twitter" width={27} height={25} />
             </a>
-            <a id="share-facebook" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary" target="_blank">
+            <a
+              id="share-facebook"
+              class="flex items-center justify-center w-14 h-14 rounded-full border border-primary"
+              target="_blank"
+            >
               <Icon id="facebook" width={15} height={29} />
             </a>
-            <a id="share-email" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary" target="_blank">
+            <a
+              id="share-email"
+              class="flex items-center justify-center w-14 h-14 rounded-full border border-primary"
+              target="_blank"
+            >
               <Icon id="mail" width={29} height={25} />
             </a>
-            <a id="share-whatsapp" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary" target="_blank">
+            <a
+              id="share-whatsapp"
+              class="flex items-center justify-center w-14 h-14 rounded-full border border-primary"
+              target="_blank"
+            >
               <Icon id="whatsapp" width={27} height={28} />
             </a>
-            <button id="share-copy" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary">
+            <button
+              id="share-copy"
+              class="flex items-center justify-center w-14 h-14 rounded-full border border-primary"
+            >
               <Icon id="copy-paste" width={27} height={28} />
             </button>
           </div>
@@ -78,23 +99,41 @@ function ShareModal() {
             const productURL = encodeURIComponent(window.location.href);
             const shareLinks = {
               x: `https://twitter.com/intent/tweet?url=${productURL}&text=Confira este produto!`, // Link para X
-              facebook: `https://www.facebook.com/sharer/sharer.php?u=${productURL}`, // Link para Facebook
-              email: `mailto:?subject=Confira este produto&body=Veja este produto interessante: ${productURL}`, // Link para E-mail
-              whatsapp: `https://api.whatsapp.com/send?text=Confira este produto: ${productURL}` // Link para WhatsApp
+              facebook:
+                `https://www.facebook.com/sharer/sharer.php?u=${productURL}`, // Link para Facebook
+              email:
+                `mailto:?subject=Confira este produto&body=Veja este produto interessante: ${productURL}`, // Link para E-mail
+              whatsapp:
+                `https://api.whatsapp.com/send?text=Confira este produto: ${productURL}`, // Link para WhatsApp
             };
-            
+
             function copyToClipboard() {
               navigator.clipboard.writeText(window.location.href)
                 .then(() => alert("Link copiado!"))
                 .catch((err) => console.error("Erro ao copiar o link: ", err));
             }
 
-            document.getElementById('share-x')?.setAttribute('href', shareLinks.x);
-            document.getElementById('share-facebook')?.setAttribute('href', shareLinks.facebook);
-            document.getElementById('share-email')?.setAttribute('href', shareLinks.email);
-            document.getElementById('share-whatsapp')?.setAttribute('href', shareLinks.whatsapp);
-            document.getElementById('share-copy')?.addEventListener('click', copyToClipboard);
-          })
+            document.getElementById("share-x")?.setAttribute(
+              "href",
+              shareLinks.x,
+            );
+            document.getElementById("share-facebook")?.setAttribute(
+              "href",
+              shareLinks.facebook,
+            );
+            document.getElementById("share-email")?.setAttribute(
+              "href",
+              shareLinks.email,
+            );
+            document.getElementById("share-whatsapp")?.setAttribute(
+              "href",
+              shareLinks.whatsapp,
+            );
+            document.getElementById("share-copy")?.addEventListener(
+              "click",
+              copyToClipboard,
+            );
+          }),
         }}
       />
     </>
@@ -104,14 +143,16 @@ interface MeasurementTable {
   image?: ImageObject | null;
 }
 function MeasurementTable({
-  image
+  image,
 }: MeasurementTable) {
   if (!image) return null;
   return (
     <dialog id="measurement_table" class="modal">
       <div class="modal-box">
         <form method="dialog">
-          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            ✕
+          </button>
           <div class="text-base font-semibold mb-5">Guia de Medidas</div>
           <img
             class="w-full object-contain bg-white rounded-xl lg:rounded-3xl"
@@ -125,7 +166,7 @@ function MeasurementTable({
         <button>close</button>
       </form>
     </dialog>
-  )
+  );
 }
 function ProductInfo({
   page,
@@ -139,7 +180,14 @@ function ProductInfo({
   const id = useId();
   const [internationalFlag, promoFlag, newsFlag] = flags;
   const { breadcrumbList, product } = page;
-  const { productID, offers, isVariantOf, brand, additionalProperty, image: images } = product;
+  const {
+    productID,
+    offers,
+    isVariantOf,
+    brand,
+    additionalProperty,
+    image: images,
+  } = product;
   const title = isVariantOf?.name ?? product.name;
   const productGroupID = isVariantOf?.productGroupID ?? "";
   const {
@@ -188,9 +236,11 @@ function ProductInfo({
       offer.seller !== seller;
   }) || [];
 
-  const measurementTableImage = 
-    ((images as ImageObject[])?.find(img => img.name === "measurementtable") as ImageObject) 
-      || null;
+  const measurementTableImage =
+    ((images as ImageObject[])?.find((img) =>
+      img.name === "measurementtable"
+    ) as ImageObject) ||
+    null;
 
   if (device === "mobile" || device === "tablet") {
     return (
@@ -207,7 +257,12 @@ function ProductInfo({
               Cod: {productID} | {brand?.name}
             </p>
             {/* @ts-ignore . */}
-            <button class="btn btn-ghost text-dark-gray underline text-xs font-normal hover:bg-transparent" hx-on:click={useScript(() => document.getElementById("share_product")?.showModal())}>
+            <button
+              class="btn btn-ghost text-dark-gray underline text-xs font-normal hover:bg-transparent"
+              hx-on:click={useScript(() =>
+                document.getElementById("share_product")?.showModal()
+              )}
+            >
               <Icon id="share-2" width={20} height={20} />
               Compartilhe
             </button>
@@ -310,19 +365,19 @@ function ProductInfo({
                         ))}
                       </div>
                     )}
-                    {!hiddenShipping && (
-                      <div class="w-[calc(100%+40px)] -mx-[20px] px-[20px] pt-1.5 pb-4 border border-b-dark-gray border-t-0">
-                        <div>
-                          <ShippingSimulationForm
-                            items={[{
-                              id: Number(product.sku),
-                              quantity: 1,
-                              seller: seller,
-                            }]}
-                          />
-                        </div>
+                  {!hiddenShipping && (
+                    <div class="w-[calc(100%+40px)] -mx-[20px] px-[20px] pt-1.5 pb-4 border border-b-dark-gray border-t-0">
+                      <div>
+                        <ShippingSimulationForm
+                          items={[{
+                            id: Number(product.sku),
+                            quantity: 1,
+                            seller: seller,
+                          }]}
+                        />
                       </div>
-                    )}
+                    </div>
+                  )}
                 </>
               )
               : (
@@ -377,7 +432,12 @@ function ProductInfo({
                     Cod: {productID} | {brand?.name}
                   </p>
                   {/* @ts-ignore . */}
-                  <button class="btn btn-ghost text-dark-gray underline text-sm hover:bg-transparent p-0 min-h-unset h-auto" hx-on:click={useScript(() => document.getElementById("share_product")?.showModal())}>
+                  <button
+                    class="btn btn-ghost text-dark-gray underline text-sm hover:bg-transparent p-0 min-h-unset h-auto"
+                    hx-on:click={useScript(() =>
+                      document.getElementById("share_product")?.showModal()
+                    )}
+                  >
                     <Icon id="share-2" />
                     Compartilhe
                   </button>

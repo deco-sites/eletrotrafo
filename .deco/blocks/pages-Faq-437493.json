@@ -28,7 +28,11 @@
               "response": "<p>A escolha de qual destas empresas será responsável pelo transporte de seu pedido caberá exclusivamente à ELETROTRAFO PRODUTOS ELÉTRICOS LTDA, não tendo o Cliente nenhuma influência sobre tal decisão.</p>"
             },
             {},
-            {}
+            {},
+            {
+              "question": "<p><strong>Como criar uma Conta de Acesso?</strong><br></p>",
+              "response": "<p>Para se cadastrar, basta realizar uma compra, e suas informações serão solicitadas durante o processo. Na sua próxima compra você vai precisar lembrar apenas de seu e-mail.</p><p><br></p>"
+            }
           ],
           "title": "Dúvidas em Geral"
         }

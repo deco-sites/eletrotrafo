@@ -80,7 +80,7 @@ const CarouselCategory = ({ categories, title }: Props) => {
       <div id="fakeLoading" class="container px-5 flex gap-5 overflow-x-hidden">
         {new Array(15).fill("").map((_, index) => (
           <div key={index}>
-            <div 
+            <div
               class="rounded-xl mb-2 skeleton"
               style={{
                 width: "114px",
@@ -91,7 +91,10 @@ const CarouselCategory = ({ categories, title }: Props) => {
           </div>
         ))}
       </div>
-      <div id="content" class="hidden container px-0 lg:px-10 overflow-hidden relative">
+      <div
+        id="content"
+        class="hidden container px-0 lg:px-10 overflow-hidden relative"
+      >
         <div class="overflow-hidden">
           <div class="swiper-wrapper">
             {categories?.map((item, index) => (

@@ -11,8 +11,8 @@ export interface Props {
 interface Attachment {
   name: string;
   content: {
-    [key:string]: string
-  }
+    [key: string]: string;
+  };
 }
 
 interface Item {
@@ -58,8 +58,8 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
     }];
 
     // deno-lint-ignore no-explicit-any
-    let cart = await (ctx as any).invoke("vtex/actions/cart/addItems.ts", { 
-      orderItems 
+    let cart = await (ctx as any).invoke("vtex/actions/cart/addItems.ts", {
+      orderItems,
     });
 
     const SUBSCRIPTION_KEY = sname;
@@ -74,32 +74,39 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
     });
 
     // deno-lint-ignore no-explicit-any
-    cart = await (ctx as any).invoke("vtex/actions/cart/updateItemAttachment.ts", {
-      index: attachmentIndex,
-      content: SUBSCRIPTION_VALUE,
-      attachment: SUBSCRIPTION_KEY,
-      noSplitItem: true,
-    });
-    
-	  const subscriptions: Subscription[] = [];
+    cart = await (ctx as any).invoke(
+      "vtex/actions/cart/updateItemAttachment.ts",
+      {
+        index: attachmentIndex,
+        content: SUBSCRIPTION_VALUE,
+        attachment: SUBSCRIPTION_KEY,
+        noSplitItem: true,
+      },
+    );
+
+    const subscriptions: Subscription[] = [];
     if (cart) {
       cart.items.forEach((item: Item, itemIndex: number) => {
         const subscription = item.attachments.find(
           (a) => a.name.indexOf("subscription") !== -1,
         )?.content || null;
-        
+
         if (subscription) {
           const plan = subscription["vtex.subscription.key.frequency"];
 
           if (plan) {
-            const [ interval, periodicity ] = plan.trim().split(" ");
-  
-            const today = new Date()
+            const [interval, periodicity] = plan.trim().split(" ");
+
+            const today = new Date();
             const validity = {
-              start: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate() > 28 ? 28 : today.getDate()}`,
-              end: `${today.getFullYear() + 3}-${today.getMonth() + 1}-${today.getDate() > 28 ? 28 : today.getDate()}`,
-            }
-  
+              start: `${today.getFullYear()}-${today.getMonth() + 1}-${
+                today.getDate() > 28 ? 28 : today.getDate()
+              }`,
+              end: `${today.getFullYear() + 3}-${today.getMonth() + 1}-${
+                today.getDate() > 28 ? 28 : today.getDate()
+              }`,
+            };
+
             subscriptions.push({
               itemIndex,
               plan: {
@@ -109,13 +116,13 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
             });
           }
         }
-      })
+      });
     }
 
     if (subscriptions.length > 0) {
       // deno-lint-ignore no-explicit-any
       await (ctx as any).invoke("vtex/actions/cart/updateAttachment.ts", {
-        attachment: 'subscriptionData',
+        attachment: "subscriptionData",
         body: { subscriptions },
       });
     }
@@ -133,7 +140,7 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 export default function Result(_props: ComponentProps<typeof action>) {
   return (
     <script
-      type="text/javascript" 
+      type="text/javascript"
       defer
       dangerouslySetInnerHTML={{
         __html: useScript(() => {
@@ -143,11 +150,12 @@ export default function Result(_props: ComponentProps<typeof action>) {
             );
             button?.click();
             // @ts-ignore showModal exists on DaisyUI
-            document.querySelector("#modal_subscription > form > button")?.click();
+            document.querySelector("#modal_subscription > form > button")
+              ?.click();
             // @ts-ignore click is correct
             document.querySelector("label[for=minicart-drawer]")?.click();
           }, 500);
-        })
+        }),
       }}
     />
   );

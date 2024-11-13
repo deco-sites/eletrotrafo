@@ -54,7 +54,8 @@ export default function Searchbar(
         }`}
       >
         <div class="search-bar-container flex items-center justify-end gap-2">
-          {/* <button
+          {
+            /* <button
             type="submit"
             form={SEARCHBAR_INPUT_FORM_ID}
             class="bg-transparent border-none hidden md:block w-6 p-0"
@@ -70,7 +71,8 @@ export default function Searchbar(
                 />
               )
               : <Icon id="search" class="inline [.htmx-request_&]:hidden" />}
-          </button> */}
+          </button> */
+          }
           <form
             id={SEARCHBAR_INPUT_FORM_ID}
             action={ACTION}

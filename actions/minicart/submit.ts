@@ -76,17 +76,16 @@ async function action(
 ): Promise<Minicart> {
   const { setQuantity, setCoupon, addToCart } = actions["vtex"];
 
-  
-  const { 
+  const {
     device,
-    minicartSuggestion = "" 
+    minicartSuggestion = "",
   } = ctx;
 
   const form = cartFrom(await req.formData());
 
   let handler = null;
   if (form.action === "add-to-cart") {
-    handler = addToCart
+    handler = addToCart;
   } else if (form.action === "reload-cart") {
     handler = vtexLoader;
   } else if (form.action === "set-coupon") {

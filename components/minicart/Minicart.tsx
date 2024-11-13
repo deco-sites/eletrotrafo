@@ -24,7 +24,7 @@ export interface Minicart {
     coupon?: string;
     locale: string;
     currency: string;
-    bestInstallment: BestInstallmentOption | null,
+    bestInstallment: BestInstallmentOption | null;
     shipping: number | null;
     enableCoupon?: boolean;
     freeShippingTarget: number;
@@ -80,14 +80,16 @@ export function ErrorFallback() {
         </span>
       </div>
 
-      {/* <button
+      {
+        /* <button
         class="btn btn-primary"
         hx-patch={useComponent(import.meta.url)}
         hx-swap="outerHTML"
         hx-target="closest div"
       >
         Retry
-      </button> */}
+      </button> */
+      }
     </div>
   );
 }
@@ -270,11 +272,13 @@ export default function Cart(
                           Frete
                         </div>
                         <span>
-                          {
-                            shipping === 0 ?
-                              <span class="font-semibold text-lime-600">Frete Grátis</span>
-                              : formatPrice(shipping, currency, locale)
-                          }
+                          {shipping === 0
+                            ? (
+                              <span class="font-semibold text-lime-600">
+                                Frete Grátis
+                              </span>
+                            )
+                            : formatPrice(shipping, currency, locale)}
                         </span>
                       </div>
                     )}
@@ -302,7 +306,8 @@ export default function Cart(
                     </div>
                     {bestInstallment && (
                       <div class="text-right text-sm text-dark-gray">
-                        ou até {bestInstallment.count}x de {formatPrice(bestInstallment.value / 100)}
+                        ou até {bestInstallment.count}x de{" "}
+                        {formatPrice(bestInstallment.value / 100)}
                       </div>
                     )}
                   </div>

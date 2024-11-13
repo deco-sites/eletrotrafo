@@ -15,7 +15,7 @@ const omit = new Set([
   "vtex.subscription.all",
   "vtex.subscription.eletrotrafo-10-off-assinatura",
   "assurant.insurance",
-  "Estimated Date Arrival"
+  "Estimated Date Arrival",
 ]);
 
 export const useVariantPossibilities = (
@@ -29,7 +29,7 @@ export const useVariantPossibilities = (
     const { url, additionalProperty = [], productID } = variant;
     const isSelected = productID === selected.productID;
     const specs = additionalProperty.filter(({ name }) => {
-      return !omit.has(name!)
+      return !omit.has(name!);
     });
 
     for (let it = 0; it < specs.length; it++) {

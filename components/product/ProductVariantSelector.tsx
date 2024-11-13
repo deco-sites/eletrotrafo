@@ -46,7 +46,8 @@ function VariantSelector({ product }: Props) {
   const possibilities = useVariantPossibilities(hasVariant, product);
   const relativeUrl = relative(url);
   const id = useId();
-  const hasMeasurementTableImage = images?.find(img => img.name === "measurementtable") || null;
+  const hasMeasurementTableImage =
+    images?.find((img) => img.name === "measurementtable") || null;
   if (Object.keys(possibilities).length === 0) {
     return null;
   }
@@ -62,14 +63,12 @@ function VariantSelector({ product }: Props) {
           <span class="text-base font-bold uppercase">
             {name}
             {name.toLowerCase() === "tamanho" && hasMeasurementTableImage && (
-              <button 
-                class="btn btn-ghost text-dark-gray underline h-auto min-h-auto hover:bg-transparent" 
-                hx-on:click={
-                  useScript(() => {
-                    // @ts-ignore .
-                    document.getElementById("measurement_table")?.showModal();
-                  })
-                }
+              <button
+                class="btn btn-ghost text-dark-gray underline h-auto min-h-auto hover:bg-transparent"
+                hx-on:click={useScript(() => {
+                  // @ts-ignore .
+                  document.getElementById("measurement_table")?.showModal();
+                })}
               >
                 Guia de medidas
               </button>

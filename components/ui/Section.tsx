@@ -13,7 +13,14 @@ function Header({ title, displayOfferTag = false }: Props) {
   }
   return (
     <div class={clx("flex justify-between items-center gap-2")}>
-      <span class="text-2xl sm:text-3xl font-semibold">{displayOfferTag && <span class="text-primary font-semibold uppercase">[Oferta]{" "}</span>}{title}</span>
+      <span class="text-2xl sm:text-3xl font-semibold">
+        {displayOfferTag && (
+          <span class="text-primary font-semibold uppercase">
+            [Oferta]{" "}
+          </span>
+        )}
+        {title}
+      </span>
     </div>
   );
 }

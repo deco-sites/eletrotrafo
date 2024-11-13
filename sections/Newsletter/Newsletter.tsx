@@ -29,7 +29,10 @@ const onLoad = () => {
     const target = e.target as HTMLInputElement;
     const value = target.value.replace(/\D/g, "");
     if (value.length > 2 && value.length <= 4) {
-      target.value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2").substring(0, 10);
+      target.value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2").substring(
+        0,
+        10,
+      );
     } else if (value.length > 4) {
       target.value = value.replace(
         /(\d{2})(\d{2})(\d{1,4})/,

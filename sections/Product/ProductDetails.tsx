@@ -94,8 +94,15 @@ export default function ProductDetails({
   }
   if (page) {
     const { product } = page;
-    const { productID: productId, image: images, isVariantOf, additionalProperty: productProperties } = product;
-    const itsForAdults = productProperties?.find((p) => p.value === "Maior de 18") || null;
+    const {
+      productID: productId,
+      image: images,
+      isVariantOf,
+      additionalProperty: productProperties,
+    } = product;
+    const itsForAdults = productProperties?.find((p) =>
+      p.value === "Maior de 18"
+    ) || null;
     const productName = (isVariantOf?.name ?? product.name) || "";
     const [front] = images ?? [];
     const image = front?.url || "";
@@ -108,22 +115,33 @@ export default function ProductDetails({
             <dialog id="itsForAdults" class="modal">
               <div class="modal-box flex flex-col gap-3 items-center">
                 <Icon id="18" size={47} />
-                <p class="text-center text-sm">Olá! Precisamos confirmar a sua idade para continuar acessando a página!</p>
-                <h3 class="text-lg font-bold text-center">Você tem mais de 18 anos?</h3>
+                <p class="text-center text-sm">
+                  Olá! Precisamos confirmar a sua idade para continuar acessando
+                  a página!
+                </p>
+                <h3 class="text-lg font-bold text-center">
+                  Você tem mais de 18 anos?
+                </h3>
                 <div class="modal-action flex gap-3 justify-center !m-0">
                   <a class="btn m-0" href="/">Não</a>
                   <form method="dialog">
-                    <button 
+                    <button
                       class="btn btn-primary"
                       hx-on:click={useScript(() => {
                         if (!localStorage.getItem("showAdultModal")) {
                           localStorage.setItem("showAdultModal", "no");
                         }
-                      })}  
-                    >Sim</button>
+                      })}
+                    >
+                      Sim
+                    </button>
                   </form>
                 </div>
-                <p class="text-center text-xs text-dark-gray m-0">Continuando você estará aceitando as políticas de <b>Privacidade e termos de uso</b> e <b>políticas de cookies</b></p>
+                <p class="text-center text-xs text-dark-gray m-0">
+                  Continuando você estará aceitando as políticas de{" "}
+                  <b>Privacidade e termos de uso</b> e{" "}
+                  <b>políticas de cookies</b>
+                </p>
               </div>
             </dialog>
             <script
@@ -134,7 +152,7 @@ export default function ProductDetails({
                     // @ts-ignore showModal exists on daisyUi
                     itsForAdults.showModal();
                   }
-                })
+                }),
               }}
             />
           </>

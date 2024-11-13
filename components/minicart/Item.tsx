@@ -8,7 +8,7 @@ import QuantitySelector from "../ui/QuantitySelector.tsx";
 import { useScript } from "@deco/deco/hooks";
 type AttachmentContent = {
   [key: string]: string;
-}
+};
 interface Attachment {
   name: string;
   content: AttachmentContent;
@@ -66,11 +66,15 @@ function CartItem({ item, index, locale, currency }: Props) {
               {attachments.map((attachment) => {
                 if (attachment.name.indexOf("subscription") !== -1) {
                   return (
-                  <div class="text-xs text-black bg-light-gray py-1/2 px-1 rounded mt-1">
+                    <div class="text-xs text-black bg-light-gray py-1/2 px-1 rounded mt-1">
                       <b>Assinatura:</b>{" "}
-                      <span>{usePeriod(attachment.content["vtex.subscription.key.frequency"])}</span>
+                      <span>
+                        {usePeriod(
+                          attachment.content["vtex.subscription.key.frequency"],
+                        )}
+                      </span>
                     </div>
-                  )
+                  );
                 }
               })}
             </div>

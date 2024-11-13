@@ -65,7 +65,11 @@ function ProductSuggestionsCard({
       <div class="col-span-2">
         <a href={relativeUrl} class="pt-5">
           {seller && inStock
-            ? <p class="my-[5px] text-sm text-middle-gray capitalize">{seller}</p>
+            ? (
+              <p class="my-[5px] text-sm text-middle-gray capitalize">
+                {seller}
+              </p>
+            )
             : <span class="my-[5px]"></span>}
           <p class="font-normal text-sm max-h-[63px] overflow-hidden">
             {title}

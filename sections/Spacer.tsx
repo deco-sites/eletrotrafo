@@ -3,7 +3,7 @@ export function LoadingFallback() {
     <div
       style={{ height: "2rem" }}
     />
-  );;
+  );
 }
 export default function Spacer() {
   return (

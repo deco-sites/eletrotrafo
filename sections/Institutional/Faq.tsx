@@ -1,25 +1,28 @@
 import Collapsable from "../../components/ui/Collapsable.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import { RichText  } from "apps/admin/widgets.ts";
+import { RichText } from "apps/admin/widgets.ts";
 
-interface Faq {
-  title?: string;
-  /** @titleBy title */
-  questions?: {
-    /**
-     * @format html
-     */
-    question?: RichText ;
-    /**
-     * @format html
-     */
-    response?: RichText ;
-  }[];
+/**
+ * @titleBy  faq
+ */
+interface Props {
+  faq?: Faq[];
 }
 
-interface Props {
-  /** @titleBy questions.question */
-  faq?: Faq[];
+/**
+ * @titleBy  title
+ */
+interface Faq {
+  title?: string;
+  questions?: Questions[];
+}
+
+/**
+ * @titleBy  question
+ */
+interface Questions {
+  question?: RichText;
+  response?: RichText;
 }
 
 const Faq = ({ faq }: Props) => {

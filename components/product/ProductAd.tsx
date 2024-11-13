@@ -33,13 +33,13 @@ export default function ProductAd({
   const {
     pix,
     listPrice,
-    installment
+    installment,
   } = useOffer(product?.product?.offers);
   const {
-    product: currentProduct
+    product: currentProduct,
   } = product;
   const {
-    isVariantOf
+    isVariantOf,
   } = currentProduct;
   const { url, brand, image: images = [], offers } = currentProduct;
   const title = isVariantOf?.name ?? currentProduct.name;

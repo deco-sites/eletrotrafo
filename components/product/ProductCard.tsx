@@ -65,8 +65,9 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front] = images ?? [];
 
-  const { listPrice = 0, price = 0, seller = "1", availability } =
-    useOffer(offers);
+  const { listPrice = 0, price = 0, seller = "1", availability } = useOffer(
+    offers,
+  );
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
   const percent = listPrice && price
@@ -106,9 +107,7 @@ function ProductCard({
         <div class="flex flex-wrap gap-[5px]">
           {percent > 1 && inStock && !hiddenFlags
             ? (
-              <span
-                class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px]"
-              >
+              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px]">
                 {percent}% off
               </span>
             )

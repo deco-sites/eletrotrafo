@@ -27,14 +27,14 @@ export const loader = (props: Props, _req: Request, ctx: AppContext) => {
 
   return { ...props, internationalFlag, promoFlag, newsFlag };
 };
-export default function ProductShelf({ 
+export default function ProductShelf({
   internationalFlag,
   promoFlag,
   newsFlag,
-  products, 
+  products,
   title,
   expireAt,
-  displayOfferTag = false
+  displayOfferTag = false,
 }: SectionProps<typeof loader>) {
   const id = useId();
   if (!products || products.length === 0) {
@@ -73,10 +73,10 @@ export default function ProductShelf({
             </div>
           )}
         </div>
-        <ProductSlider 
+        <ProductSlider
           flags={[internationalFlag, promoFlag, newsFlag]}
-          products={products} 
-          itemListName={title} 
+          products={products}
+          itemListName={title}
         />
       </Section.Container>
     </div>

@@ -26,7 +26,7 @@ export interface Props {
 
 function MenuItem({ item }: { item: INavItem }) {
   return (
-    <Collapsable 
+    <Collapsable
       title={
         <div
           className={`${
@@ -116,14 +116,14 @@ function Menu({ navItems }: Props) {
               if (user?.email && loginButton && loginButtonContent) {
                 loginButtonContent.innerHTML = `Acesse sua conta`;
                 // @ts-ignore .
-                loginButton.href = "/account"; 
-              } else if (loginButton && loginButtonContent ) {
+                loginButton.href = "/account";
+              } else if (loginButton && loginButtonContent) {
                 loginButtonContent.innerHTML = `Entre ou cadastre-se`;
                 // @ts-ignore .
                 loginButton.href = "/login";
               }
             });
-          })
+          }),
         }}
       />
     </>

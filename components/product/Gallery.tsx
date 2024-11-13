@@ -64,9 +64,9 @@ export default function GallerySlider(props: Props) {
           >
             <Icon id="ArrowSlide" class="rotate-180" />
           </Slider.NextButton>
-          
-          <button 
-            class="btn btn-ghost inline-flex absolute top-2 right-2 bg-base-100 rounded-full" 
+
+          <button
+            class="btn btn-ghost inline-flex absolute top-2 right-2 bg-base-100 rounded-full"
             hx-on:click={useScript((id) => {
               // @ts-ignore .
               document.getElementById(id)?.showModal();
@@ -103,7 +103,7 @@ export default function GallerySlider(props: Props) {
 
         <Slider.JS rootId={id} />
       </div>
-      
+
       {images && (
         <ProductImageZoom
           id={zoomId}

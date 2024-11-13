@@ -43,12 +43,17 @@ const CampaignTimer = ({
     <>
       <div class="flex gap-5 justify-center text-white text-center items-center">
         {["days", "hours", "minutes", "seconds"].map((i) => (
-        <div>
-          <p id={i} class={`${type === 1 ? "text-xl lg:text-4xl" : "text-lg lg:text-xl"} font-bold flex gap-3`}>
-            <span id="value" />
-            {i !== "seconds" && <span>:</span>}
-          </p>
-        </div>
+          <div>
+            <p
+              id={i}
+              class={`${
+                type === 1 ? "text-xl lg:text-4xl" : "text-lg lg:text-xl"
+              } font-bold flex gap-3`}
+            >
+              <span id="value" />
+              {i !== "seconds" && <span>:</span>}
+            </p>
+          </div>
         ))}
       </div>
       <script
