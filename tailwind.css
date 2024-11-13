@@ -51,6 +51,63 @@
   .is-otherpage #header {
     @apply bg-primary;
   }
+
+  .fluid-text br {
+    @apply block mt-3;
+    content: "";
+  }
+  
+  .fluid-text a {
+    @apply text-primary font-bold underline;
+  }
+  
+  .fluid-text h1 {
+    @apply text-black my-6 text-3xl font-semibold uppercase;
+  }
+  
+  .fluid-text h2 {
+    @apply text-primary mt-6 mb-3 text-lg font-semibold uppercase;
+  }
+  
+  .fluid-text h3,
+  .fluid-text h4 {
+    @apply text-primary mt-6 mb-2 text-base font-semibold uppercase;
+  }
+  
+  .fluid-text ul {
+    margin: 12px 0 12px 10px;
+    list-style: inside;
+  }
+  
+  .fluid-text li {
+    @apply my-2;
+  }
+  
+  .fluid-text p,
+  .fluid-text p span {
+    @apply my-2 !text-sm;
+  }
+  
+  @media (max-width: 1024px) {
+    .fluid-text h1 {
+      @apply text-xl mt-6 mb-3;
+    }
+  
+    .fluid-text h2,
+    .fluid-text h3,
+    .fluid-text h4 {
+      @apply text-base mt-3 my-2;
+    }
+    
+    .fluid-text li {
+      @apply text-xs;
+    }
+    
+    .fluid-text p,
+    .fluid-text p span {
+      @apply !text-xs;
+    }
+  }
 }
 
 .group:disabled .group-disabled\:animate-progress {
@@ -202,87 +259,6 @@ details>summary::marker {
 *::-webkit-media-controls-start-playback-button {
   display: none !important;
   -webkit-appearance: none;
-}
-
-.fluid-text br {
-  margin: 12px 0 0;
-  display: block;
-  content: "";
-}
-
-.fluid-text h1 {
-  margin: 24px 0;
-  font-size: 30px;    
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.fluid-text h2 {
-  margin: 24px 0;
-  font-size: 18px;    
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.fluid-text h3,
-.fluid-text h4 {
-  margin: 16px 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.fluid-text ul {
-  margin: 12px 0 12px 10px;
-  list-style: inside;
-}
-
-.fluid-text li {
-  margin: 8px 0;
-}
-
-.c p,
-.fluid-text p span {
-  margin: 12px 0;
-  font-size: 14px !important;
-}
-
-@media (max-width: 1024px) {
-  .fluid-text h1 {
-    margin: 24px 0;
-    font-size: 20px;    
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .fluid-text h2 {
-    margin: 24px 0;
-    font-size: 16px;    
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .fluid-text h3,
-  .fluid-text h4 {
-    margin: 16px 0;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .fluid-text ul {
-    margin: 12px 0 12px 10px;
-    list-style: inside;
-  }
-  
-  .fluid-text li {
-    margin: 8px 0;
-    font-size: 12px;
-  }
-  
-  .fluid-text p,
-  .fluid-text p span {
-    margin: 12px 0;
-    font-size: 12px !important;
-  }
 }
 
 .ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled {
