@@ -1,7 +1,7 @@
-import { HTMLWidget } from "apps/admin/widgets.ts";
+import { RichText } from "apps/admin/widgets.ts";
 
 interface Props {
-  html?: HTMLWidget;
+  html?: RichText;
 }
 
 const Text = ({ html }: Props) => {
