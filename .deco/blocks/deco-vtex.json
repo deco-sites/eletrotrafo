@@ -4,15 +4,15 @@
     "channelPrivacy": "public"
   },
   "platform": "vtex",
-  "publicUrl": "secure.allever.com",
-  "account": "allever",
+  "account": "eletrotrafo",
   "appKey": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "676c47712b2bb7350c8e5825de57efe3d317caa0e939f2133867cb61d9d7d157"
+    "encrypted": "4b801831c94b2d250517dbc5c28aeee506c08d856c2e4459c7f8b6ceec65cb17"
   },
   "appToken": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "5f739bd71fadd5822dc051e5a3a1136a2fe0610ecf0e74fd3788ea385fb2af71bf4f2038d181f4eb58772e87088c7b8726fdc6ebd3d0cd45db481f573462180c51426735c8d975c8dc001b5188bf2b8542f3103cf210547b43ecd04a389928445f03ef5b52d8172f82c279b375b49dafb4b392a17dcc2a1ceec8ef257cd073f00050531573580a14bcb7aa5c5f904e5a"
+    "encrypted": "61eacc315e45b0b43e63cace74be2a56e5f135711eae0cda69ac72217a1f6d51e0c02e4c2806f527151a868af0aa823f6482265c8be1ab3e5756b3a45773e110f62c34a727258029c556b2f22f29af3efe392ccbf6f71ede586dbf2d181de80148cc4579e797180b80714030a660d49236b46e97dd716e5422627fbd205e52f8b7245d249053033912c54b09ed034d3f"
   },
-  "salesChannel": "1"
+  "salesChannel": "1",
+  "publicUrl": "www.eletrotrafo.com.br"
 }

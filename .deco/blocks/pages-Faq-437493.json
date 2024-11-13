@@ -38,7 +38,10 @@
       ]
     },
     {
-      "__resolveType": "Deals"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx"
+      }
     },
     {
       "__resolveType": "Newsletter"

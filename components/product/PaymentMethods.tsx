@@ -14,6 +14,7 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
     offers?.offers.find((o) =>
       o.availability === "https://schema.org/InStock"
     ) || offers?.offers[0];
+  const { price } = offer;
   const maxIntallments = offer?.priceSpecification.reduce(
     (acc: UnitPriceSpecification | null, curr: UnitPriceSpecification) => {
       if (
@@ -36,6 +37,7 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
     null,
   );
   const pixInstallment = installment && parseFloat(installment);
+  const hasPixDiscount = pixInstallment < price;
   return (
     <>
       <button
@@ -57,33 +59,35 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
           </h3>
           <div className="flex">
             <div class="flex flex-col gap-8">
-              <button
-                id="pix"
-                class="flex flex-col items-center gap-2 text-sm font-semibold text-center text-black max-w-24"
-                hx-on:click={useScript(() => {
-                  const content = document.querySelector("div#pix");
-                  const otherContent = document.querySelector(
-                    "div#installments",
-                  );
-                  content?.classList.add("flex");
-                  content?.classList.remove("hidden");
-                  otherContent?.classList.add("hidden");
-                  otherContent?.classList.remove("flex");
-                  const pixButton = document.querySelector("button#pix > div");
-                  const installmentsButton = document.querySelector(
-                    "button#installments > div",
-                  );
-                  pixButton?.classList.add("border-primary");
-                  pixButton?.classList.remove("border-dark-gray");
-                  installmentsButton?.classList.add("border-dark-gray");
-                  installmentsButton?.classList.remove("border-primary");
-                })}
-              >
-                <div class="w-20 h-20 flex items-center justify-center border-2 border-primary rounded-full">
-                  <Icon id="pix" width={46} height={50} class="-mr-[3px] -mb-[2px]" />
-                </div>
-                Pix
-              </button>
+              {hasPixDiscount && (
+                <button
+                  id="pix"
+                  class="flex flex-col items-center gap-2 text-sm font-semibold text-center text-black max-w-24"
+                  hx-on:click={useScript(() => {
+                    const content = document.querySelector("div#pix");
+                    const otherContent = document.querySelector(
+                      "div#installments",
+                    );
+                    content?.classList.add("flex");
+                    content?.classList.remove("hidden");
+                    otherContent?.classList.add("hidden");
+                    otherContent?.classList.remove("flex");
+                    const pixButton = document.querySelector("button#pix > div");
+                    const installmentsButton = document.querySelector(
+                      "button#installments > div",
+                    );
+                    pixButton?.classList.add("border-primary");
+                    pixButton?.classList.remove("border-dark-gray");
+                    installmentsButton?.classList.add("border-dark-gray");
+                    installmentsButton?.classList.remove("border-primary");
+                  })}
+                >
+                  <div class="w-20 h-20 flex items-center justify-center border-2 border-primary rounded-full">
+                    <Icon id="pix" width={46} height={50} class="-mr-[3px] -mb-[2px]" />
+                  </div>
+                  Pix
+                </button>
+              )}
               <button
                 id="installments"
                 class="flex flex-col items-center gap-2 text-sm font-semibold text-center text-black max-w-24"
@@ -106,32 +110,34 @@ function PaymentMethods({ offers, installment }: PaymentMethodsProps) {
                   installmentsButton?.classList.remove("border-dark-gray");
                 })}
               >
-                <div class="w-20 h-20 flex items-center justify-center border-2 border-dark-gray rounded-full">
+                <div class={`w-20 h-20 flex items-center justify-center border-2 border-dark-gray rounded-full ${!hasPixDiscount && "!border-primary"}`}>
                   <Icon id="credit-card" width={45} height={35} />
                 </div>
                 Cartão de Crédito
               </button>
             </div>
             <div class="grow pl-4 lg:pl-6 ml-4 lg:ml-6 border-l border-dark-gray">
-              <div id="pix" class="flex flex-col gap-4">
-                <p class="text-2xl text-primary font-semibold flex flex-wrap items-center gap-x-2">
-                  {!!pixInstallment && formatPrice(pixInstallment)}
-                  <span class="text-normal">no PIX</span>
-                </p>
-                <p class="text-xs text-gray-600 font-semibold max-w-xs">
-                  Para pagamento via PIX será gerada uma chave e um QR Code ao
-                  finalizar o processo de compra.
-                </p>
-                <p class="text-xs text-gray-600 font-semibold max-w-xs">
-                  - O prazo de validade da chave é de X minutos. Em caso de não
-                  pagamento o pedido será cancelado.
-                </p>
-                <p class="text-xs text-gray-600 font-semibold max-w-xs">
-                  - O prazo de entrega começa a contar após a confirmação do
-                  pagamento.
-                </p>
-              </div>
-              <div id="installments" class="hidden">
+              {hasPixDiscount && (
+                <div id="pix" class="flex flex-col gap-4">
+                  <p class="text-2xl text-primary font-semibold flex flex-wrap items-center gap-x-2">
+                    {!!pixInstallment && formatPrice(pixInstallment)}
+                    <span class="text-normal">no PIX</span>
+                  </p>
+                  <p class="text-xs text-gray-600 font-semibold max-w-xs">
+                    Para pagamento via PIX será gerada uma chave e um QR Code ao
+                    finalizar o processo de compra.
+                  </p>
+                  <p class="text-xs text-gray-600 font-semibold max-w-xs">
+                    - O prazo de validade da chave é de X minutos. Em caso de não
+                    pagamento o pedido será cancelado.
+                  </p>
+                  <p class="text-xs text-gray-600 font-semibold max-w-xs">
+                    - O prazo de entrega começa a contar após a confirmação do
+                    pagamento.
+                  </p>
+                </div>
+              )}
+              <div id="installments" class={`hidden ${!hasPixDiscount && "!flex"}`}>
                 <table class="table table-xs w-full">
                   <thead>
                     <tr>

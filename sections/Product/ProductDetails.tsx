@@ -21,7 +21,7 @@ export interface Props {
 const onLoad = (productId: string, productName: string, image: string) => {
   // @ts-ignore _trustvox exists
   globalThis._trustvox = [
-    ["_storeId", "121576"],
+    ["_storeId", "123535"],
     ["_productId", productId],
     ["_productName", productName],
     ["_productPhotos", [image]],
@@ -34,7 +34,7 @@ const onLoad = (productId: string, productName: string, image: string) => {
   document.head.append(script);
   // @ts-ignore _trustvox_shelf_rate exists
   const _trustvox_shelf_rate = globalThis._trustvox_shelf_rate || [];
-  _trustvox_shelf_rate.push(["_storeId", "121576"]);
+  _trustvox_shelf_rate.push(["_storeId", "123535"]);
 };
 export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
   const {
@@ -150,7 +150,7 @@ export default function ProductDetails({
           device={device}
           productRecommendations={productRecommendations}
         />
-        <div class="border border-x-0 border-b-dark-gray border-t-0 lg:border-t-[1px] lg:border-t-dark-gray mt-0 lg:mt-12">
+        <div class="border border-x-0 border-b-dark-gray border-t-0 lg:border-t-[1px] lg:border-t-dark-gray mt-0 lg:mt-12 relative z-[1]">
           <Description page={page} />
         </div>
         {additionalProperty.length > 0 && (

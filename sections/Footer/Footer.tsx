@@ -191,7 +191,7 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             </div>
           ))}
         </div>
-        <div id="ra-verified-seal" class="pb-4" />
+        {/* <div id="ra-verified-seal" class="pb-4" />
         <script
           type="text/javascript"
           defer
@@ -212,7 +212,7 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               };
             })
           }}
-        />
+        /> */}
         {/* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed" />
         <script
           type="text/javascript"
@@ -307,7 +307,7 @@ function Footer(
                   <p class="text-base max-w-[180px]">{label}</p>
                   <ul class="flex mt-5 gap-[3px]">
                     {social.map(({ image, href, alt }) => (
-                      <li class="bg-primary p-[9px] rounded-[7px]">
+                      <li class="bg-primary p-2 rounded-full">
                         <a href={href} target="_blank">
                           <Image
                             src={image}
@@ -455,16 +455,14 @@ function Footer(
                 </ul>
               </div>
             </div>
-            <div class="bg-light-gray">
-              <div class="container flex space-between">
-                <p class="text-dark-gray text-xs sm:text-sm leading-[25px] px-5 py-5 lg:max-w-[1094px]">
-                  {copyright}
-                </p>
-                <div class="flex flex-nowrap items-end justify-center gap-5 p-5">
-                  <PoweredByWave />
-                  <PoweredByDeco />
-                  <PoweredByVtex />
-                </div>
+            <div class="container flex space-between">
+              <p class="text-dark-gray text-xs sm:text-sm leading-[25px] px-5 py-0 lg:max-w-[1094px]">
+                {copyright}
+              </p>
+              <div class="flex flex-nowrap items-end justify-center gap-5 px-5">
+                <PoweredByWave />
+                <PoweredByDeco />
+                <PoweredByVtex />
               </div>
             </div>
           </footer>
@@ -494,9 +492,9 @@ function Footer(
               {links.map(({ title, children }, index) => (
                 <ul key={index} class="flex flex-col gap-2 mb-[10px]">
                   <Collapsable
-                    class="bg-white py-[29px] rounded-[20px]"
+                    class="bg-light-gray py-[29px] rounded-[20px]"
                     title={
-                      <div class=" px-5 flex flex-row space-between  items-center">
+                      <div class="px-5 flex flex-row space-between items-center">
                         <div class="text-base font-normal">{title}</div>
                         {children && children.length > 0 && (
                           <Icon

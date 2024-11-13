@@ -15,6 +15,7 @@ export const NAME = "q";
 export interface SearchbarProps {
   placeholder?: string;
   loader: Resolved<Suggestion | null>;
+  /** @hidden */
   searchBarDrawer?: boolean;
 }
 const script = (formId: string, name: string, popupId: string) => {

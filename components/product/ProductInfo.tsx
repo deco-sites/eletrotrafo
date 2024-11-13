@@ -17,6 +17,7 @@ import ProductSubscription from "./Subscription/Form.tsx";
 import { useScript } from "@deco/deco/hooks";
 import { getFlagCluster } from "./ProductCard.tsx";
 import Icon from "../ui/Icon.tsx";
+import Price from "./Price.tsx";
 interface Props {
   page: ProductDetailsPage | null;
   flags?: [internationalFlag: string, promoFlag: string, newsFlag: string] | [];
@@ -47,7 +48,7 @@ function ShareModal() {
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
           <div class="text-base font-semibold mb-5">Compartilhar</div>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3 flex-wrap">
             <a id="share-x" class="flex items-center justify-center w-14 h-14 rounded-full border border-primary" target="_blank">
               <Icon id="x-twitter" width={27} height={25} />
             </a>
@@ -142,10 +143,10 @@ function ProductInfo({
   const title = isVariantOf?.name ?? product.name;
   const productGroupID = isVariantOf?.productGroupID ?? "";
   const {
-    pix = 0,
     price = 0,
     listPrice = 0,
     seller = "1",
+    sellerName = "",
     inventory = 0,
     installment,
     availability,
@@ -190,7 +191,6 @@ function ProductInfo({
   const measurementTableImage = 
     ((images as ImageObject[])?.find(img => img.name === "measurementtable") as ImageObject) 
       || null;
-  console.log("measurementTableImage", measurementTableImage);
 
   if (device === "mobile" || device === "tablet") {
     return (
@@ -215,14 +215,14 @@ function ProductInfo({
           </div>
           {hasPromoFlag &&
             (
-              <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-[6px] w-full">
+              <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-full w-full">
                 Promoção
               </p>
             )}
           {hasInternationalFlag &&
             (
               <div class="flex w-full">
-                <p class="text-xs font-semibold text-white uppercase bg-black text-center text-white px-2 py-1 rounded-[6px] w-full">
+                <p class="text-xs font-semibold text-white uppercase bg-black text-center text-white px-2 py-1 rounded-full w-full">
                   Produto internacional{" "}
                   <a
                     class="underline"
@@ -238,7 +238,7 @@ function ProductInfo({
             <div class="w-full max-w-[151px]">
               {hasNewsFlag &&
                 (
-                  <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]">
+                  <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full">
                     Novidade
                   </p>
                 )}
@@ -251,47 +251,7 @@ function ProductInfo({
                   <div
                     data-trustvox-product-code={productGroupID}
                   />
-                  <div class="flex flex-col gap-2">
-                    <div class="flex gap-1 items-center">
-                      {listPrice > price &&
-                        (
-                          <span class="line-through text-base text-dark-gray leading-[1]">
-                            {formatPrice(listPrice, offers?.priceCurrency)}
-                          </span>
-                        )}
-                      <span class="text-[20px] font-semibold text-black leading-[1]">
-                        {formatPrice(price, offers?.priceCurrency)}
-                      </span>
-                    </div>
-                    {price > pix && pix > 0 &&
-                      (
-                        <div class="flex flex-col items-start">
-                          <p class="text-[40px] font-semibold text-primary leading-[1]">
-                            {formatPrice(pix)}
-                            <span class="text-primary font-normal text-[30px] ml-2 leading-[1]">
-                              no PIX
-                            </span>
-                          </p>
-                        </div>
-                      )}
-                    {percent >= 1 && (
-                      <div class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px] w-fit">
-                        {percent} % off
-                      </div>
-                    )}
-                    <p
-                      class={`${
-                        price === pix
-                          ? "font-semibold text-primary text-xl"
-                          : "text-black text-base"
-                      } leading-[1]`}
-                    >
-                      ou {installment?.billingDuration}x de {formatPrice(
-                        installment?.billingIncrement,
-                        offers!.priceCurrency!,
-                      )}
-                    </p>
-                  </div>
+                  <Price type="details" product={product} isMobile={true} />
                   <PaymentMethods
                     offers={offers}
                     installment={installment?.price.toString() || ""}
@@ -322,7 +282,7 @@ function ProductInfo({
                     />
                     <p class="text-xs font-normal text-black">
                       Vendido e entregue por:{" "}
-                      <span class="font-bold capitalize">{seller}</span>
+                      <span class="font-bold capitalize">{sellerName}</span>
                     </p>
                   </div>
                   {newOffers.length > 0 &&
@@ -352,7 +312,7 @@ function ProductInfo({
                     )}
                     {!hiddenShipping && (
                       <div class="w-[calc(100%+40px)] -mx-[20px] px-[20px] pt-1.5 pb-4 border border-b-dark-gray border-t-0">
-                        <div class="lg:max-w-[338px]">
+                        <div>
                           <ShippingSimulationForm
                             items={[{
                               id: Number(product.sku),
@@ -365,50 +325,24 @@ function ProductInfo({
                     )}
                 </>
               )
-              : <OutOfStock productID={productID} />}
+              : (
+                <>
+                  <ProductSelector product={product} />
+                  <OutOfStock productID={productID} />
+                </>
+              )}
           </div>
         </div>
         <div class="fixed bottom-0 left-0 right-0 rounded-t-2xl bg-white shadow-2xl z-10">
-          <div class="container px-5 py-4 grid grid-cols-6 gap-4 items-center">
-            <div class="flex flex-col col-span-3">
-              <div class="flex flex-col items-start">
-                {pix > 0 && price > pix
-                  ? (
-                    <p class="text-lg font-semibold text-primary">
-                      {formatPrice(pix, offers?.priceCurrency)}
-                      <span class="text-primary font-normal text-xs ml-2">
-                        no PIX
-                      </span>
-                    </p>
-                  )
-                  : (
-                    <p class="text-lg font-semibold text-black">
-                      {formatPrice(price, offers?.priceCurrency)}
-                    </p>
-                  )}
-              </div>
-              <p
-                class={`${
-                  price === pix
-                    ? "font-semibold text-primary text-lg max-[390px]:text-base"
-                    : "text-black text-xs"
-                } leading-[1]`}
-              >
-                ou {installment?.billingDuration}x de {formatPrice(
-                  installment?.billingIncrement,
-                  offers!.priceCurrency!,
-                )}
-              </p>
-            </div>
-            <div class="col-span-3">
-              <AddToCartButton
-                item={item}
-                seller={seller}
-                product={product}
-                class="uppercase bg-signature-green text-base flex justify-center items-center gap-2 py-3 rounded-full no-animation text-white font-semibold hover:bg-[#1bae3299]"
-                disabled={false}
-              />
-            </div>
+          <div class="container px-5 py-4 flex gap-4 items-center">
+            <Price type="fixed" product={product} isMobile={true} />
+            <AddToCartButton
+              item={item}
+              seller={seller}
+              product={product}
+              class="uppercase bg-signature-green text-base flex justify-center items-center gap-2 py-3 rounded-full no-animation text-white font-semibold hover:bg-[#1bae3299]"
+              disabled={false}
+            />
           </div>
         </div>
       </>
@@ -452,23 +386,23 @@ function ProductInfo({
               {availability === "https://schema.org/InStock" &&
                 (
                   <>
-                    <div class="flex gap-[5px]">
+                    <div class="flex flex-col gap-[5px]">
                       {hasPromoFlag &&
                         (
-                          <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-[6px]">
+                          <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-full">
                             Promoção
                           </p>
                         )}
                       {hasNewsFlag &&
                         (
-                          <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]">
+                          <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full">
                             Novidade
                           </p>
                         )}
                       {hasInternationalFlag &&
                         (
                           <div class="flex w-full">
-                            <p class="text-xs font-semibold text-white uppercase bg-black text-center text-white px-2 py-1 rounded-[6px] w-full">
+                            <p class="text-xs font-semibold text-white uppercase bg-black text-center text-white px-2 py-1 rounded-full w-full">
                               Produto internacional{" "}
                               <a
                                 class="underline"
@@ -480,49 +414,7 @@ function ProductInfo({
                           </div>
                         )}
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <div class="flex gap-2 items-center">
-                        {listPrice > price &&
-                          (
-                            <span class="line-through text-base text-dark-gray leading-[1]">
-                              {formatPrice(listPrice, offers?.priceCurrency)}
-                            </span>
-                          )}
-                        <span class="text-[20px] font-semibold text-black leading-[1]">
-                          {formatPrice(price, offers?.priceCurrency)}
-                        </span>
-                      </div>
-                      {pix > 0 && price > pix &&
-                        (
-                          <div class="flex items-center">
-                            <p class="text-[40px] font-semibold text-primary leading-[1]">
-                              {formatPrice(pix, offers?.priceCurrency)}
-                              <span class="text-primary font-normal text-[30px] ml-2 leading-[1]">
-                                no PIX
-                              </span>
-                            </p>
-                            {percent >= 1 && (
-                              <span class="ml-3 text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px] w-fit">
-                                {percent} % off
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      <div class="fluid-text">
-                        <p
-                          class={`${
-                            price === pix
-                              ? "font-semibold text-primary text-xl"
-                              : "text-black text-base"
-                          }`}
-                        >
-                          ou {installment?.billingDuration}x de {formatPrice(
-                            installment?.billingIncrement,
-                            offers!.priceCurrency!,
-                          )}
-                        </p>
-                      </div>
-                    </div>
+                    <Price type="details" product={product} isMobile={false} />
                     <PaymentMethods
                       offers={offers}
                       installment={installment?.price.toString() || ""}
@@ -553,7 +445,7 @@ function ProductInfo({
                       )}
                       <p class="text-xs font-normal text-black">
                         Vendido e entregue por:{" "}
-                        <span class="font-bold capitalize">{seller}</span>
+                        <span class="font-bold capitalize">{sellerName}</span>
                       </p>
                     </div>
                     {newOffers.length > 0 &&
@@ -585,7 +477,7 @@ function ProductInfo({
                         </div>
                       )}
                     {!hiddenShipping && (
-                      <div class="lg:max-w-[338px]">
+                      <div>
                         <ShippingSimulationForm
                           items={[{
                             id: Number(product.sku),
@@ -599,11 +491,12 @@ function ProductInfo({
                 )}
             </div>
             <div class="flex flex-col gap-[14px] py-[14px]">
-              {availability != "https://schema.org/InStock" &&
+              {availability !== "https://schema.org/InStock" &&
                 (
-                  <div>
+                  <>
+                    <ProductSelector product={product} />
                     <OutOfStock productID={productID} />
-                  </div>
+                  </>
                 )}
             </div>
           </div>
@@ -616,36 +509,7 @@ function ProductInfo({
             <div class="hidden lg:block text-xl font-semibold text-black col-span-3">
               {title}
             </div>
-            <div class="flex flex-col col-span-2">
-              <div class="flex flex-col items-start">
-                {pix > 0 && price > pix
-                  ? (
-                    <p class="text-2xl font-semibold text-primary">
-                      {formatPrice(pix, offers?.priceCurrency)}
-                      <span class="text-primary font-normal text-xl ml-2">
-                        no PIX
-                      </span>
-                    </p>
-                  )
-                  : (
-                    <p class="text-xl font-semibold text-black">
-                      {formatPrice(price, offers?.priceCurrency)}
-                    </p>
-                  )}
-              </div>
-              <p
-                class={`${
-                  price === pix
-                    ? "font-semibold text-primary text-xl"
-                    : "text-black text-base"
-                } leading-[1]`}
-              >
-                ou {installment?.billingDuration}x de {formatPrice(
-                  installment?.billingIncrement,
-                  offers!.priceCurrency!,
-                )}
-              </p>
-            </div>
+            <Price type="fixed" product={product} isMobile={false} />
             <div class="col-span-2">
               <AddToCartButton
                 item={item}

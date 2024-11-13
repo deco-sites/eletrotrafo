@@ -37,7 +37,7 @@ export type Props = {
    * @default custom
    */
   platform: Platform;
-  vtex: Config;
+  // vtex: Config;
 } & CommerceProps;
 export type Platform =
   | "vtex"

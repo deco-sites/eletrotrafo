@@ -1,0 +1,28 @@
+{
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Title.tsx",
+      "title": "Lojas",
+      "breadcrumb": "Institucional"
+    },
+    {
+      "__resolveType": "site/sections/Institutional/Text.tsx",
+      "html": "<div class=\"cl-preview-section\"><p><span style=\"color: rgb(17, 57, 224);\" data-mce-style=\"color: rgb(17, 57, 224);\"><strong>Cornélio Procópio - PR</strong></span><br>Av. Dr. Francisco Lacerda Jr., 1551 - Centro - CEP 86.300-000<br>E-mail:&nbsp;<a href=\"mailto:cornelio@eletrotrafo.com.br\" data-mce-href=\"mailto:cornelio@eletrotrafo.com.br\">cornelio@eletrotrafo.com.br</a><br>(43)3520-5000</p></div><div class=\"cl-preview-section\"><p><span style=\"color: rgb(17, 57, 224);\" data-mce-style=\"color: rgb(17, 57, 224);\"><strong>Guarapuava - PR</strong></span><br>Av. Manoel Ribas, 4500 - Bairro Conradinho - CEP 85.055-010<br>E-mail:&nbsp;<a href=\"mailto:guarapuava@eletrotrafo.com.br\" data-mce-href=\"mailto:guarapuava@eletrotrafo.com.br\">guarapuava@eletrotrafo.com.br</a><br>(42) 3629-9800</p></div><div class=\"cl-preview-section\"><p><span style=\"color: rgb(17, 57, 224);\" data-mce-style=\"color: rgb(17, 57, 224);\"><strong>Londrina - PR</strong></span><br>Av. Tiradentes, 1340 - Jd. Shangri-lá - CEP 86.070-000<br>E-mail:&nbsp;<a href=\"mailto:londrina@eletrotrafo.com.br\" data-mce-href=\"mailto:londrina@eletrotrafo.com.br\">londrina@eletrotrafo.com.br</a><br>(43) 3294-5000</p></div><div class=\"cl-preview-section\"><p><span style=\"color: rgb(17, 57, 224);\" data-mce-style=\"color: rgb(17, 57, 224);\"><strong>Pato Branco - PR</strong></span><br>Av. Tupi, 4497 - Jd. Cristo Rei - CEP 85-507-513<br>E-mail:&nbsp;<a href=\"mailto:patobranco@eletrotrafo.com.br\" data-mce-href=\"mailto:patobranco@eletrotrafo.com.br\">patobranco@eletrotrafo.com.br</a><br>(46) 3225-5555</p></div><div class=\"cl-preview-section\"><p><span style=\"color: rgb(17, 57, 224);\" data-mce-style=\"color: rgb(17, 57, 224);\"><strong>Telêmaco Borba - PR</strong></span><br>Av. Paraná, 1005 - Centro - CEP 84.261-060<br>e-mail:&nbsp;<a href=\"mailto:telemacoborba@eletrotrafo.com.br\" data-mce-href=\"mailto:telemacoborba@eletrotrafo.com.br\">telemacoborba@eletrotrafo.com.br</a><br>(42) 3273-7000</p></div>"
+    },
+    {
+      "__resolveType": "Newsletter"
+    },
+    {
+      "__resolveType": "Footer Component"
+    }
+  ],
+  "name": "Lojas",
+  "path": "/lojas"
+}

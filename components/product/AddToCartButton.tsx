@@ -40,7 +40,7 @@ function AddToCartButton(props: Props) {
   return (
     <div
       id={id}
-      class="flex"
+      class="flex w-full"
       data-item-id={product.productID}
       data-cart-item={encodeURIComponent(
         JSON.stringify({ item, platformProps }),
@@ -50,7 +50,7 @@ function AddToCartButton(props: Props) {
         class={clx("flex-grow cursor-pointer", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-        {!hiddenIcon && <Icon id="shopping_bag" size={21} />}
+        {!hiddenIcon && <Icon id="shopping_bag" class="max-[375px]:hidden" size={21} />}
         Comprar
       </button>
     </div>

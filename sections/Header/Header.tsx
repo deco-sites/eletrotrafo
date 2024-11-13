@@ -126,7 +126,7 @@ const Desktop = ({ logo, searchbar }: Props) => (
         />
 
         <div class="main-logo">
-          <Logo src={logo.src} alt={logo.alt} />
+          <Logo src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
         </div>
 
         <div class="flex gap-4 items-center place-self-end">

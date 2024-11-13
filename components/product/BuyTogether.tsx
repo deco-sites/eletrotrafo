@@ -289,7 +289,7 @@ export default function BuyTogether({
                       </span>
                     </div>
                     <button
-                      class="btn btn-primary gap-1"
+                      class="btn btn-primary gap-1 px-16"
                       hx-on:click={useScript(onClick)}
                     >
                       Adicionar <span id="add-to-cart-count">2</span>{" "}
@@ -317,7 +317,7 @@ export default function BuyTogether({
               <span id="total-price" class="text-xl font-semibold">R$ 0</span>
             </div>
             <button
-              class="btn btn-primary gap-1"
+              class="btn btn-primary gap-1 px-9"
               hx-on:click={useScript(onClick)}
             >
               Adicionar <span id="add-to-cart-count">2</span> ao carrinho

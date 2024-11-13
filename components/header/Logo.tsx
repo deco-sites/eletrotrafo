@@ -13,7 +13,6 @@ function Logo({
   alt,
   width = 100,
   height = 23,
-  isExpanded,
 }: LogoProps) {
   return (
     <>

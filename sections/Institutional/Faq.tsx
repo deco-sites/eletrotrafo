@@ -34,7 +34,7 @@ const Faq = ({ faq }: Props) => {
             <div className="flex flex-col gap-4">
               {item.questions?.map((q, qIndex) => (
                 <div
-                  class="bg-white rounded-[20px] py-4 px-5"
+                  class="bg-light-gray rounded-2xl py-4 px-5"
                   key={qIndex}
                 >
                   <Collapsable

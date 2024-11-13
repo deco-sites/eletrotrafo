@@ -10,6 +10,10 @@
     scroll-behavior: smooth;
   }
 
+  html, body {
+    @apply text-black;
+  }
+
   /** Remove default styles from input[type=number] */
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {

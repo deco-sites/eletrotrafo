@@ -25,14 +25,15 @@
   },
   "mode": "dark",
   "mainColors": {
-    "primary": "#123ADD",
-    "base-100": "#F2F2F2",
+    "primary": "#163970",
+    "base-100": "#FFFFFF",
     "secondary": "#FFF",
     "success": "#219259",
     "warning": "#a39e0f",
     "error": "#d10a0a",
     "info": "#3c4cc8",
-    "neutral": "#000000"
+    "neutral": "#2D2A2B",
+    "tertiary": "#2D2A2B"
   },
   "complementaryColors": {
     "primary-content": "#ffffff",

@@ -47,7 +47,7 @@ const SixthVariation = ({ title, items }: SixthVariationProps) => {
                         width={items[1].desktop?.Width}
                         height={items[1].desktop?.Height}
                         fetchPriority="low"
-                        class="object-cover rounded-[40px] w-full h-full"
+                        class="object-cover rounded-[40px] w-full"
                       />
                     </a>
                     <a href={items[1].Link} class="block">
@@ -61,7 +61,7 @@ const SixthVariation = ({ title, items }: SixthVariationProps) => {
                         width={items[1].desktop?.Width}
                         height={items[1].desktop?.Height}
                         fetchPriority="low"
-                        class="object-cover rounded-[40px] w-full h-full"
+                        class="object-cover rounded-[40px] w-full"
                       />
                     </a>
                   </>

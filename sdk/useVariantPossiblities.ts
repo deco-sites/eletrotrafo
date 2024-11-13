@@ -1,4 +1,5 @@
 import type { ProductLeaf, PropertyValue } from "apps/commerce/types.ts";
+import { ConsoleLogRecordExporter } from "deco/deps.ts";
 
 export type Possibilities = Record<string, Record<string, string | undefined>>;
 
@@ -14,6 +15,7 @@ const omit = new Set([
   "vtex.subscription.all",
   "vtex.subscription.eletrotrafo-10-off-assinatura",
   "assurant.insurance",
+  "Estimated Date Arrival"
 ]);
 
 export const useVariantPossibilities = (
@@ -26,7 +28,9 @@ export const useVariantPossibilities = (
   for (const variant of variants) {
     const { url, additionalProperty = [], productID } = variant;
     const isSelected = productID === selected.productID;
-    const specs = additionalProperty.filter(({ name }) => !omit.has(name!));
+    const specs = additionalProperty.filter(({ name }) => {
+      return !omit.has(name!)
+    });
 
     for (let it = 0; it < specs.length; it++) {
       const name = specs[it].name!;

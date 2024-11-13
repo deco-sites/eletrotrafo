@@ -1,15 +1,15 @@
 {
   "seo": {
     "type": "website",
-    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/089321b4-b628-4c2a-8bb4-ab87919cbe33/logo.svg",
-    "title": "Allever",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/cfa48c09-1f71-4b59-8238-7ee5feef5e36/dark-logo.svg",
+    "title": "Eletrotrafo",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx ",
-    "titleTemplate": "%s | Allever",
-    "descriptionTemplate": "%s | Deco.cx",
+    "description": "A Eletrotrafo atua há mais de 30 anos na distribuição de materiais elétricos de baixa, média e alta tensão. Embora seja considerada especialista no mercado de material elétrico, a Eletrotrafo oferece em seu catálogo uma grande variedade de produtos, dos mais diversos departamentos.",
     "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/1c846a7d-728f-45d1-ad1e-2bf36ba52003/favicon.ico",
-    "themeColor": "#163970"
+    "themeColor": "#163970",
+    "descriptionTemplate": "%s",
+    "titleTemplate": "%s"
   },
   "theme": {
     "__resolveType": "Deco"
@@ -77,9 +77,9 @@
     "api": {},
     "my": {}
   },
-  "newsFlag": "40",
+  "newsFlag": "145",
   "shelfFlag1": "163",
-  "promoFlag": "157",
-  "internationalFlag": "160",
-  "minicartSuggestion": "159"
+  "promoFlag": "145",
+  "internationalFlag": "145",
+  "minicartSuggestion": "145"
 }

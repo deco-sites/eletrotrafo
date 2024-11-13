@@ -62,6 +62,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
     return spec.name === "Pix";
   })?.price || 0;
   const inventory = offer?.inventoryLevel?.value;
+  const sellerName = offer?.sellerName;
   const seller = offer?.seller;
   const price = offer?.price;
 
@@ -71,6 +72,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
     listPrice: listPrice?.price,
     availability,
     seller,
+    sellerName,
     pix,
     installment,
     installments: installment && price

@@ -38,12 +38,6 @@ export interface Props {
    * @description Check this option when this banner is the biggest image on the screen for image optimizations
    */
   preload?: boolean;
-
-  /**
-   * @title Autoplay interval
-   * @description time (in seconds) to start the carousel autoplay
-   */
-  interval?: number;
 }
 
 function BannerItem(
@@ -124,7 +118,7 @@ function BannerItem(
   );
 }
 
-function Carousel({ images = [], preload, interval }: Props) {
+function Carousel({ images = [], preload }: Props) {
   const id = useId();
 
   return (
@@ -139,7 +133,7 @@ function Carousel({ images = [], preload, interval }: Props) {
       )}
     >
       <div class="col-span-full row-span-full leading-[1]">
-        <Slider class="carousel carousel-center w-full gap-6">
+        <Slider class="carousel carousel-center sm:carousel-end w-full gap-6">
           {images.map((image, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
               <BannerItem image={image} lcp={index === 0 && preload} />
@@ -149,53 +143,25 @@ function Carousel({ images = [], preload, interval }: Props) {
       </div>
       {images.length > 1
         ? (
-          <>
-            <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
-              <Slider.PrevButton
-                class="btn-sm"
-                disabled={false}
-              >
-                <Icon id="chevron-right" class="rotate-180" />
-              </Slider.PrevButton>
-            </div>
+          <div class="container absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center">
+            <Slider.PrevButton
+              class="btn-sm px-5 hidden sm:flex disabled:hidden"
+              disabled={false}
+            >
+              <Icon id="chevron-right" class="rotate-180" />
+            </Slider.PrevButton>
 
-            <div class="hidden sm:flex items-center justify-center z-10 col-start-3 row-start-2">
-              <Slider.NextButton
-                class="btn-sm"
-                disabled={false}
-              >
-                <Icon id="chevron-right" />
-              </Slider.NextButton>
-            </div>
-          </>
+            <Slider.NextButton
+              class="btn-sm px-5 hidden sm:flex disabled:hidden ml-auto"
+              disabled={false}
+            >
+              <Icon id="chevron-right" />
+            </Slider.NextButton>
+          </div>
         )
         : null}
 
-      <ul
-        class={clx(
-          "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-3 hidden lg:flex",
-        )}
-      >
-        {images.map((_, index) => (
-          images.length > 1
-            ? (
-              <li class="carousel-item ">
-                <Slider.Dot
-                  index={index}
-                  class={clx(
-                    "bg-black h-3 w-3 no-animation rounded-full",
-                    "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width] bg-primary",
-                  )}
-                >
-                </Slider.Dot>
-              </li>
-            )
-            : null
-        ))}
-      </ul>
-
-      <Slider.JS rootId={id} interval={interval && interval * 1e3} infinite />
+      <Slider.JS rootId={id} />
     </div>
   );
 }

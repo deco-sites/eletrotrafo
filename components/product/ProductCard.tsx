@@ -4,11 +4,11 @@ import WishlistButton from "../wishlist/WishlistButton.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import { formatPrice } from "../../sdk/format.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import type { Product, PropertyValue } from "apps/commerce/types.ts";
 import MinicartAdd from "./MinicartAdd.tsx";
+import Price from "./Price.tsx";
 
 interface Props {
   flags?: [internationalFlag: string, promoFlag: string, newsFlag: string];
@@ -65,7 +65,7 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front] = images ?? [];
 
-  const { pix, listPrice = 0, price = 0, seller = "1", availability, installment } =
+  const { listPrice = 0, price = 0, seller = "1", availability } =
     useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
@@ -98,7 +98,7 @@ function ProductCard({
     <div
       {...event}
       class={clx(
-        "card flex flex-col justify-start card-compact group text-sm bg-white p-3 sm:p-5",
+        "card flex flex-col justify-start card-compact group text-sm bg-white p-0",
         _class,
       )}
     >
@@ -168,38 +168,7 @@ function ProductCard({
           <p class="font-normal text-sm text-ellipsis font-bold line-clamp-2 h-10">
             {title}
           </p>
-          {inStock
-            ? (
-              <div class="flex flex-col">
-                {listPrice > price &&
-                  (
-                    <span class="line-through font-normal text-dark-gray text-xs">
-                      {formatPrice(listPrice, offers?.priceCurrency)}
-                    </span>
-                  )}
-                <span class="font-semibold text-xl text-primary">
-                  {pix > 0
-                    ? formatPrice(pix, offers?.priceCurrency)
-                    : formatPrice(price, offers?.priceCurrency)} {pix > 0 &&
-                    (
-                      <span class="text-primary font-normal text-base">
-                        no pix
-                      </span>
-                    )}
-                </span>
-                <span class="text-dark-gray text-xs">
-                  ou {installment?.billingDuration}x de {formatPrice(
-                    installment?.billingIncrement,
-                    offers!.priceCurrency!,
-                  )}
-                </span>
-              </div>
-            )
-            : (
-              <p class="text-left font-semibold">
-                Produto Indisponível
-              </p>
-            )}
+          <Price type="shelf" product={product} />
         </a>
         <div
           class="mt-2"

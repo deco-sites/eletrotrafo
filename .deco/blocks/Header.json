@@ -60,9 +60,9 @@
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/3e00d53d-696d-4266-972b-c5c50c5ac2f3",
-    "alt": "Allever",
-    "width": 94,
-    "height": 20.26
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/089321b4-b628-4c2a-8bb4-ab87919cbe33/logo.svg",
+    "alt": "Eletrotrafo",
+    "width": 140,
+    "height": 33
   }
 }

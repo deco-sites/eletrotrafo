@@ -21,6 +21,24 @@
             "label": "Confira"
           },
           "mobile": "https://placehold.co/640x800"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/18bae574-1324-4994-9929-5cf47fddbf73",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://placehold.co/640x800"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/18bae574-1324-4994-9929-5cf47fddbf73",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://placehold.co/640x800"
         }
       ],
       "preload": true
@@ -258,14 +276,31 @@
           "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
           "props": {
             "sort": "price:desc",
-            "collection": "149",
+            "collection": "145",
             "count": 10,
             "hideUnavailableItems": true
           }
         },
-        "expireAt": "2024-12-01T02:59:00.000Z",
-        "displayOfferTag": true
+        "displayOfferTag": true,
+        "expireAt": "2024-11-30T03:00:00.000Z"
       }
+    },
+    {
+      "__resolveType": "site/sections/Spacer.tsx",
+      "size": "medium"
+    },
+    {
+      "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
+      "Label": "algum sub titulo",
+      "product": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "/tomada-antena-tv-coaxial-orion-–-schneider-14172/p"
+        },
+        "similars": false
+      },
+      "expireAt": "2024-12-01T02:59:00.000Z"
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
@@ -319,23 +354,6 @@
           }
         }
       ]
-    },
-    {
-      "__resolveType": "site/sections/Spacer.tsx",
-      "size": "medium"
-    },
-    {
-      "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
-      "Label": "algum sub titulo",
-      "product": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": {
-          "__resolveType": "website/functions/requestToParam.ts",
-          "param": "/tomada-antena-tv-coaxial-orion-–-schneider-14172/p"
-        },
-        "similars": false
-      },
-      "expireAt": "2024-12-01T02:59:00.000Z"
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
@@ -801,9 +819,6 @@
     {
       "__resolveType": "site/sections/Spacer.tsx",
       "size": "medium"
-    },
-    {
-      "__resolveType": "Deals"
     },
     {
       "__resolveType": "Newsletter"

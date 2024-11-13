@@ -81,6 +81,12 @@ function Menu({ navItems }: Props) {
             <span />
           </a>
           <a
+            href="https://www.b2b.eletrotrafo.com.br/"
+            class="h-14 flex items-center font-semibold text-sm border-b border-b-middle-gray"
+          >
+            Loja B2B
+          </a>
+          <a
             href="/atendimento"
             class="h-14 flex items-center font-semibold text-sm border-b border-b-middle-gray"
           >

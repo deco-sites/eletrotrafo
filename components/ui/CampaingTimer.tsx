@@ -18,7 +18,7 @@ const onLoad = (
     const hours = Math.max(Math.floor((difference / (1000 * 60 * 60)) % 24), 0);
     const minutes = Math.max(Math.floor((difference / 1000 / 60) % 60), 0);
     const seconds = Math.max(Math.floor((difference / 1000) % 60), 0);
-    if (seconds === 0 || minutes === 0 || hours === 0 || days === 0) {
+    if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) {
       container.classList.add("hidden");
     }
     container.querySelector("#days #value")!.innerHTML = formatTime(days);

@@ -122,24 +122,27 @@
   "social": [
     {
       "alt": "Instagram",
-      "href": "https://www.instagram.com/allever.store/",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6"
+      "href": "https://www.instagram.com/eletrotrafo.loja/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/fbdfdfcb-c7c3-418d-8f7c-b7adbd891bd6",
+      "title": "Instagram"
     },
     {
       "alt": "X",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/e1261d5e-5119-4649-8477-dafc77c93c43",
-      "href": "https://x.com/allever_store"
+      "href": "https://x.com/eletrotrafo",
+      "title": "X"
     },
     {
       "alt": "linkedin",
-      "href": "https://www.linkedin.com/company/allever/",
+      "href": "https://br.linkedin.com/company/eletrotrafo",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/8d8afe41-92e0-4f58-9476-b62b4e564e66/XMLID_801_.svg",
       "title": "Linkedin"
     },
     {
       "alt": "facebook",
-      "href": "https://www.facebook.com/allever.store",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/049c05ec-4787-4ed1-bf08-371b999413ee"
+      "href": "https://www.facebook.com/Eletrotrafo",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/a74ea30f-db35-4e89-b23e-37705c5b4df3/facebook.svg",
+      "title": "Facebook"
     }
   ],
   "paymentMethods": {
@@ -186,7 +189,7 @@
       "href": "#"
     }
   ],
-  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/acdad346-f26d-4cc6-a28c-10b6d87650b9",
+  "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/cfa48c09-1f71-4b59-8238-7ee5feef5e36/dark-logo.svg",
   "trademark": "Os preços e condições de pagamento apresentados neste “site” somente são válidos para as compras efetuadas no ato da sua exibição. Apenas aos pedidos efetivamente formulados e aceitos não se aplicarão eventuais alterações posteriores de preço. Em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras. Allever Ltda - CNPJ: 43.757.816/0001-77 - Rua Francisco Regin, 339, Centro, Cornélio Procópio, PR, CEP - 86300-000 - faleconosco@allever.com - (11) 4200-0010 - Todos os direitos reservados.",
   "service": {
     "title": "SAC",
@@ -230,26 +233,6 @@
         "width": 135,
         "height": 32,
         "link": "https://letsencrypt.org/"
-      },
-      {
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/82977f72-d198-400f-acc3-e641be10eec2",
-        "width": 104,
-        "height": 32,
-        "alt": "Google Browsing selo",
-        "link": "https://transparencyreport.google.com/safe-browsing/search?url=www.allever.com"
-      },
-      {
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/680d5a5e-0f85-459a-9134-b48158a2d272",
-        "width": 50,
-        "height": 52,
-        "alt": "Confi selo",
-        "link": "https://confi.com.vc/lojas-confiaveis/detalhes?id=130774"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/allever-store/f7fcaadf-5692-484d-a526-c1b0092d90a3/pci.png",
-        "alt": "PCI VTEX",
-        "width": 69,
-        "height": 42
       }
     ],
     "hideSeal": false
