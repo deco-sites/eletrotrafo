@@ -1,6 +1,6 @@
 import Collapsable from "../../components/ui/Collapsable.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import { HTMLWidget } from "apps/admin/widgets.ts";
+import { RichText  } from "apps/admin/widgets.ts";
 
 interface Faq {
   title?: string;
@@ -9,11 +9,11 @@ interface Faq {
     /**
      * @format html
      */
-    question?: HTMLWidget;
+    question?: RichText ;
     /**
      * @format html
      */
-    response?: HTMLWidget;
+    response?: RichText ;
   }[];
 }
 
