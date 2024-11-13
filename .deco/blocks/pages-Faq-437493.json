@@ -27,11 +27,45 @@
               "question": "<p>Qual a empresa responsável pela entrega da minha Compra?</p>",
               "response": "<p>A escolha de qual destas empresas será responsável pelo transporte de seu pedido caberá exclusivamente à ELETROTRAFO PRODUTOS ELÉTRICOS LTDA, não tendo o Cliente nenhuma influência sobre tal decisão.</p>"
             },
+<<<<<<< HEAD
             {},
             {},
             {
               "question": "<p><strong>Como criar uma Conta de Acesso?</strong><br></p>",
               "response": "<p>Para se cadastrar, basta realizar uma compra, e suas informações serão solicitadas durante o processo. Na sua próxima compra você vai precisar lembrar apenas de seu e-mail.</p><p><br></p>"
+=======
+            {
+              "question": "<p>Posso adicionar outro produto à Compra que eu fiz?<br></p>",
+              "response": "<p>Depois de finalizada, você tem 10 minutos para realizar alterações em seu pedido. Em caso de dúvida, entre em contato com o SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados. .</p>"
+            },
+            {
+              "question": "<p>Não recebi todos os itens da minha Compra. O que faço?<br></p>",
+              "response": "<p>Entre em contato com o nosso SAC (Central de Atendimento ELETROTRAFO PRODUTOS ELÉTRICOS LTDA) por telefone (043) 3520-5000 ou pelos outros meios de atendimento disponibilizados.</p>"
+            },
+            {
+              "question": "<p>Posso efetuar uma Compra no Site com CNPJ?<br></p>",
+              "response": "<p>Sim, estamos trabalhando com esta opção, basta selecionar no checkout a opção \"Incluir dados de pessoa jurídica\"</p>"
+            },
+            {
+              "question": "<p>Como faço para confirmar a disponibilidade de um produto no estoque?<br></p>",
+              "response": "<p>No Site, se houver carrinho de compras visível no momento da finalização do pedido, significa que há estoque do produto.</p>"
+            },
+            {
+              "question": "<p>Posso fazer minha Compra no Site e buscar os produtos adquiridos na loja física?<br></p>",
+              "response": "<p>Sim, no momento do checkout, se disponível para seu CEP, a opção retire na loja ira aparecer. O produto ficará disponível para retirada por 15 dias corridos após prazo de disponibilidade. Para retirar o produto, o cliente devera levar nota fiscal e documento com foto, não entregamos para terceiros, somente para o titular da nota.</p>"
+            },
+            {
+              "question": "<p>Qualquer pessoa pode receber em casa o produto que eu comprei?<br></p>",
+              "response": "<p>Sim, desde que seja maior de idade, esteja munido de um documento de identificação e assine o protocolo de entrega.</p>"
+            },
+            {
+              "question": "<p>Existe um valor mínimo de pedido?<br></p>",
+              "response": "<p>Sim, o valor mínimo para o pedido é de R$10,00.</p>"
+            },
+            {
+              "question": "<p>A ELETROTRAFO PRODUTOS ELÉTRICOS LTDA faz entrega parcial?<br></p>",
+              "response": "<p>Sim, os envios dos produtos podem ser separados, em caso de duvidas entre em contato.</p>"
+>>>>>>> 570aefefdda741917518e026f26e7fd50f4d85fb
             }
           ],
           "title": "Dúvidas em Geral"
