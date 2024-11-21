@@ -6,8 +6,11 @@
       "__resolveType": "Header"
     },
     {
-      "__resolveType": "site/sections/Institutional/Title.tsx",
-      "title": "Fale conosco"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institutional/Text.tsx",
+        "html": "<h1>Fale Conosco</h1><p>(43) 3520-5000 </p><p>08:00 às 18:00 segunda a sexta </p><p>08:00 às 12:00 aos sábados </p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:faleconosco@eletrotrafo.com.br\">faleconosco@eletrotrafo.com.br</a></p>"
+      }
     },
     {
       "__resolveType": "site/sections/Institutional/Form.tsx"

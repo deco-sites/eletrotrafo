@@ -126,7 +126,7 @@ export default function Price({
                   )}
                 </span>
               )}
-            <span class="text-[20px] font-semibold text-black leading-[1]">
+            <span class="text-xl font-semibold text-black leading-[1]">
               {formatPrice(price, offers?.priceCurrency)}
             </span>
           </div>
@@ -146,12 +146,12 @@ export default function Price({
                 )}
               </div>
             )}
-          <div class="fluid-text">
+          <div>
             <p
               class={`${
-                price === pix
-                  ? "font-semibold text-primary text-xl"
-                  : "text-black text-base"
+                hasPixDiscount
+                  ? "text-black text-base"
+                  : "font-semibold text-primary text-xl"
               }`}
             >
               ou {installment?.billingDuration}x de {formatPrice(

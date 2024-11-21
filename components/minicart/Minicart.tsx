@@ -110,7 +110,7 @@ function ProductRecommendations({
           Você também pode <b class="text-primary">[Gostar]</b>
         </span>
       </div>
-      <div class="flex flex-row max-lg:overflow-x-auto lg:flex-col gap-4 lg:overflow-y-auto lg:max-h-[calc(100vh-129px)] px-5 lg:px-12 py-5">
+      <div class="flex flex-row max-lg:overflow-x-auto lg:flex-col gap-4 lg:overflow-y-auto lg:max-h-[calc(100vh-129px)] px-5 lg:px-12 pt-5 pb-8 lg:py-5">
         {recommendations.map((item: Product, index: number) => (
           <ProductCard
             key={index}
@@ -266,8 +266,8 @@ export default function Cart(
                   {/* Subtotal */}
                   <div class="flex flex-col">
                     {shipping && (
-                      <div class="flex justify-between px-4 pt-5">
-                        <div class="flex gap-5 text-base text-dark-gray flex gap-5">
+                      <div class="flex justify-between px-4 pt-5 gap-2">
+                        <div class="flex items-center gap-2 text-sm lg:text-base text-dark-gray">
                           <Icon id="delivery-box" />
                           Frete
                         </div>

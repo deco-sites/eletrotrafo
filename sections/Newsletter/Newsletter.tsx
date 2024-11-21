@@ -42,21 +42,30 @@ const onLoad = () => {
   };
 };
 export async function action(props: Props, req: Request, ctx: AppContext) {
-  const platform = usePlatform();
   const form = await req.formData();
   const email = `${form.get("email") ?? ""}`;
-  const name = `${form.get("name") ?? ""}`;
+  const fullName = `${form.get("name") ?? ""}`;
+  const firstSpaceIndex = fullName.indexOf(" ");
+  const firstName = fullName.substring(0, firstSpaceIndex);
+  const restOfName = fullName.substring(firstSpaceIndex + 1);
   const birthday = `${form.get("birthday") ?? ""}`;
-  if (platform === "vtex") {
-    // deno-lint-ignore no-explicit-any
-    await (ctx as any).invoke("vtex/actions/newsletter/subscribe.ts", {
-      email,
-      name,
-      birthday,
-    });
-    return { ...props, status: "success" };
-  }
-  return { ...props, status: "failed" };
+  const [day, month, year] = birthday.split('/');
+  const birthDate = new Date(`${year}-${month}-${day}T00:00:00Z`);
+  const data = {
+    firstName,
+    lastName: restOfName,
+    email,
+    birthDate,
+  };
+  // deno-lint-ignore no-explicit-any
+  await (ctx as any).invoke(
+    "vtex.actions.masterdata.createDocument",
+    {
+      acronym: "CL",
+      data,
+    }
+  );
+  return { ...props, status: "success" };
 }
 export function loader(props: Props) {
   return { ...props, status: undefined };
@@ -66,8 +75,8 @@ function Notice({ title, description }: {
   description?: string;
 }) {
   return (
-    <div class="flex flex-col justify-center items-start gap-4 max-w-[390px] ">
-      <span class="text-[20px] font-semibold text-center sm:text-start text-white">
+    <div class="flex flex-col justify-center items-start gap-2 max-w-sm">
+      <span class="text-xl font-semibold text-center sm:text-start text-white">
         {title}
       </span>
       <span class="text-xs font-normal text-base-300 text-start text-white">
@@ -102,16 +111,14 @@ function Newsletter({
 }: SectionProps<typeof loader, typeof action>) {
   if (status === "success" || status === "failed") {
     return (
-      <Section.Container class="bg-primary">
-        <div class="p-14 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10">
-          <Icon
-            size={80}
-            class={clx(status === "success" ? "text-success" : "text-error")}
-            id={status === "success" ? "check-circle" : "error"}
-          />
-          <Notice {...status === "success" ? success : failed} />
-        </div>
-      </Section.Container>
+      <div class="bg-primary p-14 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10">
+        <Icon
+          size={80}
+          class={clx(status === "success" ? "text-success" : "text-error")}
+          id={status === "success" ? "check-circle" : "error"}
+        />
+        <Notice {...status === "success" ? success : failed} />
+      </div>
     );
   }
   return (
@@ -120,7 +127,6 @@ function Newsletter({
         <Section.Container>
           <div class="flex space-between flex-col lg:flex-row items-center px-5 py-11 gap-5">
             <Notice {...empty} />
-
             <form
               class="flex justify-center flex-col lg:gap-4 w-full"
               hx-swap="outerHTML"
@@ -156,10 +162,10 @@ function Newsletter({
                   class="bg-black rounded-[20px] px-[21px] py-[13px] "
                   type="submit"
                 >
-                  <span class="[.htmx-request_&]:hidden inline text-white ">
+                  <span class="[.htmx-request_&]:hidden inline text-white">
                     {label}
                   </span>
-                  <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
+                  <span class="[.htmx-request_&]:inline-block hidden loading loading-spinner text-white" />
                 </button>
               </div>
               <p

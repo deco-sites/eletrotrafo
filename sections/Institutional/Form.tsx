@@ -18,7 +18,7 @@ const onLoad = () => {
     }
   };
 
-  (document.getElementById("phone") as HTMLInputElement).oninput = (e) => {
+  (document.getElementById("telefone") as HTMLInputElement).oninput = (e) => {
     const target = e.currentTarget as HTMLInputElement;
     const value = target.value.replace(/\D/g, "");
     if (value.length > 10) {
@@ -37,36 +37,36 @@ export default function Form({
     <div>
       <div class="container px-5 relative">
         {toast === "success" && (
-          <div class="toast toast-end">
+          <div class="toast toast-end z-[1]">
             <div class="alert alert-success text-white">
-              <span>{message}</span>
+              <span class="text-wrap">{message}</span>
             </div>
           </div>
         )}
 
         {toast === "error" && (
-          <div class="toast toast-end">
+          <div class="toast toast-end z-[1]">
             <div class="alert alert-error text-white">
-              <span>{message}</span>
+              <span class="text-wrap">{message}</span>
             </div>
           </div>
         )}
 
         <form
-          class="p-8 w-full mx-auto my-8 bg-white rounded-[10px]"
+          class="p-4 lg:p-5 w-full mx-auto my-5 bg-white rounded-3xl border border-light-gray"
           hx-swap="outerHTML"
           hx-post={useComponent(import.meta.url)}
           hx-target="closest section"
         >
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
+              class="block text-xs mb-1"
               htmlFor="email"
             >
               E-mail*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               name="email"
@@ -76,29 +76,29 @@ export default function Form({
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
-              htmlFor="fullName"
+              class="block text-xs mb-1"
+              htmlFor="nome"
             >
               Nome completo*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="fullName"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              id="nome"
               type="text"
-              name="fullName"
+              name="nome"
               placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
+              class="block text-xs mb-1"
               htmlFor="cpf"
             >
               CPF/CNPJ*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="cpf"
               type="text"
               name="cpf"
@@ -108,29 +108,29 @@ export default function Form({
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
-              htmlFor="phone"
+              class="block text-xs mb-1"
+              htmlFor="telefone"
             >
               Telefone*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="phone"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              id="telefone"
               type="tel"
-              name="phone"
+              name="telefone"
               placeholder="Digite aqui"
               required
             />
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
+              class="block text-xs mb-1"
               htmlFor="orderNumber"
             >
               Número do pedido (opcional)
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="orderNumber"
               type="text"
               name="orderNumber"
@@ -139,13 +139,13 @@ export default function Form({
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
+              class="block text-xs mb-1"
               htmlFor="reason"
             >
               Motivo do seu contato*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="reason"
               type="text"
               name="reason"
@@ -155,13 +155,13 @@ export default function Form({
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
+              class="block text-xs mb-1"
               htmlFor="subject"
             >
               Assunto*
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="appearance-none border border-light-gray rounded w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
               id="subject"
               type="text"
               name="subject"
@@ -171,15 +171,15 @@ export default function Form({
           </div>
           <div class="mb-4">
             <label
-              class="block text-xs font-bold mb-2"
-              htmlFor="message"
+              class="block text-xs mb-1"
+              htmlFor="mensagem"
             >
-              Descrição*
+              Mensagem*
             </label>
             <textarea
-              class="shadow appearance-none border rounded min-h-[300px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              name="message"
+              class="appearance-none border border-light-gray rounded min-h-[300px] w-full py-2 px-3 text-xs placeholder:text-middle-gray leading-tight focus:outline-none focus:shadow-outline"
+              id="mensagem"
+              name="mensagem"
               placeholder="Digite aqui"
               required
             >
@@ -217,32 +217,35 @@ export const action = async (
   const form = await req.formData();
 
   const cpf = `${form.get("cpf") ?? ""}`;
+  const nome = `${form.get("nome") ?? ""}`;
   const email = `${form.get("email") ?? ""}`;
-  const phone = `${form.get("phone") ?? ""}`;
-  const fullName = `${form.get("fullName") ?? ""}`;
+  const telefone = `${form.get("telefone") ?? ""}`;
+  const mensagem = `${form.get("mensagem") ?? ""}`;
   const orderNumber = `${form.get("orderNumber") ?? ""}`;
   const reason = `${form.get("reason") ?? ""}`;
   const subject = `${form.get("subject") ?? ""}`;
-  const message = `${form.get("message") ?? ""}`;
+
+  const data = {
+    cpf,
+    nome,
+    email,
+    telefone,
+    mensagem,
+    orderNumber,
+    reason,
+    subject
+  };
 
   try {
     // deno-lint-ignore no-explicit-any
-    await (ctx as any).invoke(
+    const response = await (ctx as any).invoke(
       "vtex.actions.masterdata.createDocument",
       {
-        acronym: "CT",
-        data: {
-          cpf,
-          email,
-          phone,
-          reason,
-          message,
-          subject,
-          fullName,
-          orderNumber,
-        },
+        acronym: "FC",
+        data,
       },
     );
+    console.log("response", response);
 
     return {
       toast: "success",

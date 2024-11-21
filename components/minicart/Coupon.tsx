@@ -6,8 +6,8 @@ export interface Props {
 
 function Coupon({ coupon }: Props) {
   return (
-    <div class="flex justify-between items-center px-4 pt-[10px] pb-5">
-      <span class="text-base text-dark-gray flex gap-5">
+    <div class="flex gap-2 justify-between items-center px-4 pt-[10px] pb-5">
+      <span class="text-sm lg:text-base text-dark-gray flex items-center gap-2">
         <Icon width={29} height={24} id="ecomm-ticket" />
         Cupom
       </span>

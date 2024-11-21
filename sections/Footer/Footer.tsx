@@ -191,32 +191,11 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
             </div>
           ))}
         </div>
-        {
-          /* <div id="ra-verified-seal" class="pb-4" />
-        <script
-          type="text/javascript"
-          defer
-          dangerouslySetInnerHTML={{
-            __html: useScript(() => {
-              const script = document.createElement("script");
-              script.type = "text/javascript";
-              script.id = "ra-embed-verified-seal";
-              script.src = "https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js";
-              script.async = true;
-              script.setAttribute("data-id", "SU42UkdsUjZ1emVXSjhnLTphbGxldmVy");
-              script.setAttribute("data-target", "ra-verified-seal");
-              script.setAttribute("data-model", "2");
-              document.body.appendChild(script);
-
-              return () => {
-                document.body.removeChild(script);
-              };
-            })
-          }}
-        /> */
-        }
-        {
-          /* <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed" />
+        <div data-trustvox-certificate-fixed="data-trustvox-certificate-fixed">
+          <a href="https://certificados.trustvox.com.br/www.eletrotrafo.com.br?hidden=false" class="trustvox-certificate__modal-btn-js" target="_blank">
+            <span class="trustvox-certificate__fixed trustvox-certificate__fixed-full-left"></span>
+          </a>
+        </div>
         <script
           type="text/javascript"
           defer
@@ -225,13 +204,12 @@ function CertifiedComponent({ title, certifieds }: CertifiedProps) {
               const script = document.createElement("script");
               script.type = "text/javascript";
               script.src = "//certificate.trustvox.com.br/widget.js";
-              script.defer = true;
+              script.defer = false;
               console.log("script", script);
               document.body.appendChild(script);
             })
           }}
-        /> */
-        }
+        />
       </div>
     </div>
   );

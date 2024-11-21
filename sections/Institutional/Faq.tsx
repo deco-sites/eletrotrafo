@@ -44,7 +44,7 @@ const Faq = ({ faq }: Props) => {
                     title={
                       <div className="flex justify-between text-sm items-center">
                         <div
-                          class="text-base"
+                          class="text-sm lg:text-base"
                           dangerouslySetInnerHTML={{
                             __html: q.question?.toString() || "",
                           }}
@@ -60,7 +60,7 @@ const Faq = ({ faq }: Props) => {
                     }
                   >
                     <div
-                      className="text-sm fluid-text text-dark-gray mt-2"
+                      className="text-xs lg:text-sm fluid-text text-dark-gray mt-2"
                       dangerouslySetInnerHTML={{
                         __html: q.response?.toString() || "",
                       }}

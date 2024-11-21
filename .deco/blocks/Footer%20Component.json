@@ -12,16 +12,16 @@
           "title": "FAQ"
         },
         {
-          "href": "/politica-de-pagamentos",
+          "href": "/politicas-de-pagamentos",
           "title": "Política de pagamento"
         },
         {
           "title": "Prazos de Entrega",
-          "href": "/prazos-de-entrega"
+          "href": "/politica-de-entrega"
         },
         {
           "title": "Trocas e Devoluções",
-          "href": "https://allever.troque.app.br/"
+          "href": "/politica-de-troca-e-devolucao"
         }
       ],
       "href": "/fale-conosco",
@@ -31,27 +31,20 @@
       "title": "Institucional",
       "children": [
         {
-          "title": "Quem somos",
-          "href": "/sobre"
-        },
-        {
-          "title": "Política de Segurança",
-          "href": "/politica-de-privacidade-e-seguranca"
+          "title": "Nossa História",
+          "href": "/nossa-historia"
         },
         {
           "title": "Termos de Uso",
-          "href": "termos-e-condicoes-de-uso-do-site"
+          "href": "/termos-de-uso"
         },
         {
-          "title": "Área do colaborador"
-        },
-        {
-          "title": "Trabalhe Conosco",
-          "href": "/trabalhe-conosco"
+          "title": "Política de Privacidade",
+          "href": "/politica-de-privacidade"
         },
         {
           "title": "Lojas",
-          "href": "/Lojas"
+          "href": "/lojas"
         }
       ],
       "href": "https://sac.allever.com/hc/pt-br/articles/11992913554836-Sobre-a-allever"
@@ -69,7 +62,8 @@
           "title": "08:00 às 12:00 aos sábados"
         },
         {
-          "title": "faleconosco@eletrotrafo.com.br"
+          "title": "faleconosco@eletrotrafo.com.br",
+          "href": "mailto:faleconosco@eletrotrafo.com.br"
         }
       ]
     },
@@ -234,6 +228,9 @@
         "width": 135,
         "height": 32,
         "link": "https://letsencrypt.org/"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/eletrotrafo/745bc6a1-ce31-4714-b22d-0d8e9472de6a/pci.png"
       }
     ],
     "hideSeal": false

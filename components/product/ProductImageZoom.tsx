@@ -14,7 +14,7 @@ function ProductImageZoom({ images, id = useId() }: Props) {
   return (
     <>
       <dialog id={id} class="modal">
-        <div class="modal-box w-full sm:min-h-[90vh] sm:min-w-[90vh] sm:max-w-11/12 max-sm:h-full max-sm:max-h-full max-sm:rounded-none flex items-center justify-center max-sm:p-0 p-12">
+        <div class="modal-box overflow-hidden w-full sm:min-h-[90vh] sm:min-w-[90vh] sm:max-w-11/12 max-sm:h-full max-sm:max-h-full max-sm:rounded-none flex items-center justify-center max-sm:p-0 p-12">
           <form method="dialog">
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕

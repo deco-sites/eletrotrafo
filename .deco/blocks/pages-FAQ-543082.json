@@ -8,14 +8,8 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Spacer.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Institutional/Text.tsx",
-        "html": "<p>Atendimento<br><br><strong><span style=\"font-size: 15pt\">FAQ </span></strong><br></p><p><strong><span style=\"color: #163970\">Para visitar nossa página de ajuda</span><span style=\"color: #2d2a2b\">,</span><u><span style=\"color: #2d2a2b\"> </span></u></strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://eletrotrafo.zendesk.com/hc/pt-br\"><strong><u><span style=\"color: #2d2a2b\">Clique Aqui</span></u></strong></a><strong><u><span style=\"color: #2d2a2b\">.</span></u></strong></p>"
+        "html": "<h1>FAQ</h1><p><strong><span style=\"color: rgb(22, 57, 112)\">Para visitar nossa página de ajuda</span><span style=\"color: rgb(45, 42, 43)\">,</span><u><span style=\"color: rgb(45, 42, 43)\"> </span></u></strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://eletrotrafo.zendesk.com/hc/pt-br\"><strong><u><span style=\"color: rgb(45, 42, 43)\">Clique Aqui</span></u></strong></a><strong><u><span style=\"color: rgb(45, 42, 43)\">.</span></u></strong></p>"
       }
     },
     {
