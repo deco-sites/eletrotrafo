@@ -16,8 +16,8 @@ const SeventhVariation = ({ title, items }: SeventhVariationProps) => {
                 <p class="text-2xl sm:text-3xl font-semibold">{title}</p>
               </div>
             )}
-          <div class="grid grid-cols-10 justify-center gap-4">
-            <div class="col-span-4">
+          <div class="grid grid-cols-3 justify-center gap-4">
+            <div class="col-span-1">
               <a href={items[0].Link} class="flex max-w-[650px] h-full">
                 <Image
                   src={items[0].desktop?.Image ||
@@ -32,7 +32,7 @@ const SeventhVariation = ({ title, items }: SeventhVariationProps) => {
                 />
               </a>
             </div>
-            <div class="col-span-6 grid grid-rows-2 grid-cols-2 gap-4">
+            <div class="col-span-2 grid grid-rows-2 grid-cols-2 gap-4">
               {items &&
                 (
                   <>

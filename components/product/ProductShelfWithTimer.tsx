@@ -34,7 +34,6 @@ export default function ProductShelf({
   products,
   title,
   expireAt,
-  displayOfferTag = false,
 }: SectionProps<typeof loader>) {
   const id = useId();
   if (!products || products.length === 0) {
@@ -62,7 +61,7 @@ export default function ProductShelf({
         {...viewItemListEvent}
       >
         <div class="flex flex-wrap items-center gap-x-10 gap-y-[0.5rem] px-[18px] lg:px-[25px]">
-          <Section.Header title={title} displayOfferTag={displayOfferTag} />
+          <Section.Header title={title} />
           {expireAt && (
             <div class="bg-primary px-4 py-2 rounded-xl">
               <CampaignTimer

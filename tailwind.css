@@ -90,7 +90,7 @@
   
   @media (max-width: 1024px) {
     .fluid-text h1 {
-      @apply text-xl mt-6 mb-3;
+      @apply text-xl my-3;
     }
   
     .fluid-text h2,

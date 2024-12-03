@@ -1,27 +1,23 @@
 import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
+import { RichText } from "apps/admin/widgets.ts";
 import { useSection } from "@deco/deco/hooks";
 export interface Props {
   /** @description Section title */
-  title?: string;
-  displayOfferTag?: boolean;
+  title?: RichText;
 }
-function Header({ title, displayOfferTag = false }: Props) {
+function Header({ title }: Props) {
   if (!title) {
     return null;
   }
   return (
-    <div class={clx("flex justify-between items-center gap-2")}>
-      <span class="text-2xl sm:text-3xl font-semibold">
-        {displayOfferTag && (
-          <span class="text-primary font-semibold uppercase">
-            [Oferta]{" "}
-          </span>
-        )}
-        {title}
-      </span>
-    </div>
+    <div 
+      class="text-2xl sm:text-3xl font-semibold"
+      dangerouslySetInnerHTML={{
+        __html: title
+      }}
+    />
   );
 }
 interface Tab {

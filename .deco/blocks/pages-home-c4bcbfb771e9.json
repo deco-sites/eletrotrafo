@@ -251,7 +251,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithTimer.tsx",
-        "title": "Teste do Timer",
+        "title": "<p><span style=\"color: #17396e\">OFERTAS</span> Teste do Timer</p>",
         "cta": "Confira",
         "hideLabel": true,
         "products": {
@@ -273,7 +273,7 @@
     },
     {
       "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
-      "Label": "algum sub titulo",
+      "Label": "Lorem ipsum lorem lorem ipsum lorem lorem ipsum dolor ist lorem ipsum",
       "product": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
         "slug": {
@@ -282,7 +282,8 @@
         },
         "similars": false
       },
-      "expireAt": "2024-12-01T02:59:00.000Z"
+      "expireAt": "2024-12-01T02:59:00.000Z",
+      "Title": "<p><strong>Oferta</strong> Relâmpago</p>"
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
