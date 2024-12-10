@@ -251,7 +251,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithTimer.tsx",
-        "title": "<p><span style=\"color: #17396e\">OFERTAS</span> Teste do Timer</p>",
+        "title": "<p><span style=\"color: rgb(23, 57, 110)\">OFERTAS</span> Teste do Timer</p>",
         "cta": "Confira",
         "hideLabel": true,
         "products": {
@@ -264,7 +264,7 @@
           }
         },
         "displayOfferTag": true,
-        "expireAt": "2024-11-30T03:00:00.000Z"
+        "expireAt": "2024-12-30T03:00:00.000Z"
       }
     },
     {
@@ -704,11 +704,10 @@
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
-          "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
+          "term": "tv",
+          "sort": "price:desc",
+          "facets": "category-1",
+          "query": "12"
         }
       }
     },
