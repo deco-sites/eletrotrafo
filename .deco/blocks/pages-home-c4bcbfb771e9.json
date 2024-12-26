@@ -259,12 +259,12 @@
           "props": {
             "sort": "price:desc",
             "collection": "145",
-            "count": 10,
-            "hideUnavailableItems": true
+            "count": 12,
+            "similars": true
           }
         },
         "displayOfferTag": true,
-        "expireAt": "2024-12-30T03:00:00.000Z"
+        "expireAt": "2015-02-01T01:59:00.000Z"
       }
     },
     {
