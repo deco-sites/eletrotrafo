@@ -251,16 +251,16 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithTimer.tsx",
-        "title": "<p><span style=\"color: rgb(23, 57, 110)\">OFERTAS</span> Teste do Timer</p>",
+        "title": "<p><span style=\"color: rgb(23, 57, 110)\">OFERTAS</span> do mês</p>",
         "cta": "Confira",
         "hideLabel": true,
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
           "props": {
             "sort": "price:desc",
-            "collection": "145",
             "count": 12,
-            "similars": true
+            "fuzzy": "automatic",
+            "query": "Cabo"
           }
         },
         "displayOfferTag": true,
@@ -282,7 +282,7 @@
         },
         "similars": false
       },
-      "expireAt": "2024-12-01T02:59:00.000Z",
+      "expireAt": "2025-02-01T02:59:00.000Z",
       "Title": "<p><strong>Oferta</strong> Relâmpago</p>"
     },
     {
@@ -707,7 +707,7 @@
           "term": "tv",
           "sort": "price:desc",
           "facets": "category-1",
-          "query": "12"
+          "query": "145"
         }
       }
     },
