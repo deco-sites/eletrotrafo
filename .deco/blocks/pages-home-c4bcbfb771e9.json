@@ -260,7 +260,7 @@
             "sort": "price:desc",
             "count": 12,
             "fuzzy": "automatic",
-            "query": "Cabo"
+            "query": "Cabos"
           }
         },
         "displayOfferTag": true,
