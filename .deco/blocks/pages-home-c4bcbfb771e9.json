@@ -707,7 +707,9 @@
           "term": "tv",
           "sort": "price:desc",
           "facets": "category-1",
-          "query": "145"
+          "query": "145",
+          "count": 12,
+          "hideUnavailableItems": true
         }
       }
     },
