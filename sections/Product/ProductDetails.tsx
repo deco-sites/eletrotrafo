@@ -11,10 +11,10 @@ import type { Product, ProductDetailsPage } from "apps/commerce/types.ts";
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  /** @hidden */
-  isMobile: boolean;
-  /** @hidden */
-  productRecommendations: Product[];
+  /** @hide */
+  isMobile?: boolean;
+  /** @hide */
+  productRecommendations?: Product[];
   /** @title Omitir seção de entrega? */
   hiddenShipping?: boolean;
 }

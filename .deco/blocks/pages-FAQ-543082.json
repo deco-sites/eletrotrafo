@@ -203,9 +203,6 @@
           {
             "questions": [
               {
-                "question": "<p><strong>Os preços são válidos em todas as lojas físicas?<br></strong></p>"
-              },
-              {
                 "question": "<p>Os preços para venda pelo site são os mesmos das lojas físicas?<br></p>",
                 "response": "<p>Não. Os preços apresentados no Site se referem apenas às compras efetuadas no site, não se aplicando nem ao Televendas nem às lojas físicas.</p><p><br></p>"
               },

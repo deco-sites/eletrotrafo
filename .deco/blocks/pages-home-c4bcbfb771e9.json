@@ -260,7 +260,7 @@
             "sort": "price:desc",
             "count": 12,
             "fuzzy": "automatic",
-            "query": "Cabos"
+            "query": "152"
           }
         },
         "displayOfferTag": true,
@@ -803,6 +803,12 @@
     {
       "__resolveType": "site/sections/Spacer.tsx",
       "size": "medium"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Deals"
+      }
     },
     {
       "__resolveType": "Newsletter"

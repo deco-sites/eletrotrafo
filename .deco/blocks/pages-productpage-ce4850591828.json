@@ -70,10 +70,15 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "commerce/sections/Seo/SeoPDP.tsx",
-        "jsonLD": {
-          "__resolveType": "PDP Loader"
-        }
+        "__resolveType": "site/sections/Spacer.tsx",
+        "size": "medium"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Spacer.tsx",
+        "size": "medium"
       }
     }
   ],

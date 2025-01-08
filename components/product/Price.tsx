@@ -14,12 +14,12 @@ export default function Price({
   isMobile = false,
 }: Props) {
   const { offers } = product;
-  const { pix, listPrice = 0, price = 0, availability, installment } = useOffer(
-    offers,
-  );
+  const offer = useOffer(offers);
+  const { pix, listPrice = 0, price = 0, availability, installment } = offer;
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;
+  console.log("percent", percent);
   const hasPixDiscount = pix > 0 && pix < price;
 
   if (type === "shelf") {
@@ -69,7 +69,7 @@ export default function Price({
     if (isMobile) {
       return (
         <div class="flex flex-col gap-2">
-          <div class="flex gap-1 items-center">
+          <div class="flex gap-2 items-center">
             {listPrice > price &&
               (
                 <span class="line-through text-base text-dark-gray leading-[1]">
@@ -82,6 +82,11 @@ export default function Price({
             <span class="text-[20px] font-semibold text-black leading-[1]">
               {formatPrice(price, offers?.priceCurrency)}
             </span>
+            {percent >= 1 && (
+              <div class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-full w-fit">
+                {percent} % off
+              </div>
+            )}
           </div>
           {hasPixDiscount &&
             (
@@ -94,11 +99,6 @@ export default function Price({
                 </p>
               </div>
             )}
-          {percent >= 1 && (
-            <div class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px] w-fit">
-              {percent} % off
-            </div>
-          )}
           <p
             class={`${
               price === pix
@@ -129,6 +129,11 @@ export default function Price({
             <span class="text-xl font-semibold text-black leading-[1]">
               {formatPrice(price, offers?.priceCurrency)}
             </span>
+            {percent >= 1 && (
+              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-full w-fit">
+                {percent} % off
+              </span>
+            )}
           </div>
           {hasPixDiscount &&
             (
@@ -139,11 +144,6 @@ export default function Price({
                     no PIX
                   </span>
                 </p>
-                {percent >= 1 && (
-                  <span class="ml-3 text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px] w-fit">
-                    {percent} % off
-                  </span>
-                )}
               </div>
             )}
           <div>

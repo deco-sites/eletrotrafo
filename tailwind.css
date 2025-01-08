@@ -44,6 +44,10 @@
     @apply top-0 fixed bg-primary;
   }
 
+  .is-homepage #header-wrapper {
+    @apply absolute;
+  }
+
   .is-homepage #header {
     @apply fixed;
   }

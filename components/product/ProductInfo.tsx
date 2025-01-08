@@ -189,6 +189,7 @@ function ProductInfo({
     image: images,
   } = product;
   const title = isVariantOf?.name ?? product.name;
+  const model = isVariantOf?.model ?? "";
   const productGroupID = isVariantOf?.productGroupID ?? "";
   const {
     price = 0,
@@ -254,12 +255,12 @@ function ProductInfo({
           </h1>
           <div class="flex items-center justify-between">
             <p class="text-dark-gray m-0 text-xs">
-              Cod: {productID} | {brand?.name}
+              Cod: {model} | {brand?.name}
             </p>
-            {/* @ts-ignore . */}
             <button
               class="btn btn-ghost text-dark-gray underline text-xs font-normal hover:bg-transparent"
               hx-on:click={useScript(() =>
+                // @ts-ignore .
                 document.getElementById("share_product")?.showModal()
               )}
             >
@@ -431,10 +432,10 @@ function ProductInfo({
                   <p class="text-dark-gray">
                     Cod: {productID} | {brand?.name}
                   </p>
-                  {/* @ts-ignore . */}
                   <button
                     class="btn btn-ghost text-dark-gray underline text-sm hover:bg-transparent p-0 min-h-unset h-auto"
                     hx-on:click={useScript(() =>
+                      // @ts-ignore .
                       document.getElementById("share_product")?.showModal()
                     )}
                   >
@@ -442,23 +443,17 @@ function ProductInfo({
                     Compartilhe
                   </button>
                 </div>
+                {hasNewsFlag &&
+                  (
+                    <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full max-w-40">
+                      Novidade
+                    </p>
+                  )}
               </div>
               {availability === "https://schema.org/InStock" &&
                 (
                   <>
                     <div class="flex flex-col gap-[5px]">
-                      {hasPromoFlag &&
-                        (
-                          <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-full">
-                            Promoção
-                          </p>
-                        )}
-                      {hasNewsFlag &&
-                        (
-                          <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full">
-                            Novidade
-                          </p>
-                        )}
                       {hasInternationalFlag &&
                         (
                           <div class="flex w-full">
@@ -475,6 +470,12 @@ function ProductInfo({
                         )}
                     </div>
                     <Price type="details" product={product} isMobile={false} />
+                    {hasPromoFlag &&
+                      (
+                        <p class="text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-full max-w-40">
+                          Promoção
+                        </p>
+                      )}
                     <PaymentMethods
                       offers={offers}
                       installment={installment?.price.toString() || ""}

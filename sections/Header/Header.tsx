@@ -13,6 +13,7 @@ import Searchbar, {
   type SearchbarProps,
 } from "../../components/search/Searchbar/Form.tsx";
 import {
+  NAVBAR_HEIGHT_DESKTOP,
   NAVBAR_HEIGHT_MOBILE,
   SEARCHBAR_DRAWER_ID,
   SIDEMENU_CONTAINER_ID,
@@ -32,7 +33,7 @@ const onLoad = () => {
 
   const homePage = globalThis.location.pathname === "/";
   const scrollY = globalThis.scrollY;
-  if (scrollY > 50) {
+  if (scrollY > 36) {
     body.classList.add("is-scrolled");
   } else {
     body.classList.remove("is-scrolled");
@@ -52,7 +53,7 @@ const onLoad = () => {
 
   setInterval(() => {
     const scrollY = globalThis.scrollY;
-    if (scrollY > 50) {
+    if (scrollY > 36) {
       body.classList.add("is-scrolled");
     } else {
       body.classList.remove("is-scrolled");
@@ -244,7 +245,11 @@ function Header({
   return (
     <>
       {alerts.length > 0 && <Alert alerts={alerts} />}
-      <header>
+      <header id="header-wrapper" style={{
+        height: device === "desktop" ? 
+          NAVBAR_HEIGHT_DESKTOP :
+          NAVBAR_HEIGHT_MOBILE
+      }}>
         <div
           id="header"
           class="hidden bg-transparent w-full z-40 group-header ease-in duration-500"
@@ -253,7 +258,6 @@ function Header({
             ? <Desktop logo={logo} {...props} />
             : <Mobile logo={logo} {...props} />}
         </div>
-        {/* <MicroHeaderSetup threshold={50}/> */}
         <script
           type="module"
           dangerouslySetInnerHTML={{

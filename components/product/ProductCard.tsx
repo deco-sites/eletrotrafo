@@ -35,11 +35,12 @@ export const getFlagCluster = (
   flag: string,
   additionalProperty?: PropertyValue[],
 ) => {
-  return additionalProperty?.find((prop) => {
+  const propertie = additionalProperty?.find((prop) => {
     if (prop.name === "cluster") {
       return prop.propertyID === flag;
     }
   });
+  return propertie;
 };
 
 function ProductCard({
@@ -107,7 +108,7 @@ function ProductCard({
         <div class="flex flex-wrap gap-[5px]">
           {percent > 1 && inStock && !hiddenFlags
             ? (
-              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-[6px]">
+              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-full">
                 {percent}% off
               </span>
             )
@@ -115,7 +116,7 @@ function ProductCard({
           {hasNewsFlag && !hiddenFlags && (
             <span
               class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-[6px]",
+                "text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full",
               )}
             >
               Novidade
@@ -124,7 +125,7 @@ function ProductCard({
           {hasPromoFlag && !hiddenFlags && (
             <span
               class={clx(
-                "text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-[6px]",
+                "text-xs font-semibold text-white uppercase bg-[#F22E2E] text-center text-white px-2 py-1 rounded-full",
               )}
             >
               Promoção
@@ -156,7 +157,7 @@ function ProductCard({
         <a href={relativeUrl} class="flex flex-col gap-2">
           <div class="flex flex-col gap-1">
             {hasInternationalFlag && (
-              <p class="px-1 sm:px-6 py-1 flex items-center justify-center bg-black text-white font-semibold text-[10px] sm:text-xs">
+              <p class="px-1 sm:px-6 py-1 flex items-center justify-center bg-black text-white font-semibold text-[10px] sm:text-xs rounded-full">
                 Compra Internacional
               </p>
             )}

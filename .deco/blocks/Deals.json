@@ -2,7 +2,7 @@
   "__resolveType": "site/sections/Images/Deals.tsx",
   "deals": [
     {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/3f4f2d50-989d-435e-8d74-7544c58e7c9b",
+      "image": "https://data.decoassets.com/eletrotrafo/1e453925-29c5-4252-bfb2-6b8698998a98/security_15362463-1.svg",
       "label": "Ambiente seguro e certificado",
       "title": "Compra segura",
       "width": 48,
@@ -11,12 +11,12 @@
     {
       "title": "Parcelamento",
       "label": "Em até 21x",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/35f7795a-b79e-4b84-a866-23d68244438b",
+      "image": "https://data.decoassets.com/eletrotrafo/3c832d98-45d5-43a8-a5c8-963e60e15075/card.svg",
       "width": 39,
       "height": 39
     },
     {
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/b5b98d9c-6c84-433b-8fe9-88d94033effc",
+      "image": "https://data.decoassets.com/eletrotrafo/b8e73f30-f383-4552-9ab2-8a1c6da2189d/double.svg",
       "title": "Até 2 cartões",
       "label": "Use até 2 cartões no seu pagamento",
       "width": 43,
@@ -25,7 +25,7 @@
     {
       "label": "Em até 7 dias",
       "title": "Devolva grátis",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11097/ccdb94b6-e186-4e7a-952f-ee0be220cea5",
+      "image": "https://data.decoassets.com/eletrotrafo/d78684b8-8474-473b-b470-472b9989ab46/rotate-360.svg",
       "width": 30,
       "height": 30
     }

@@ -50,21 +50,36 @@ export default function Results({ result }: ComponentProps<typeof action>) {
 
   return (
     <ul class="flex flex-col gap-4 pt-4">
-      {methods.map((method) => (
-        <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
-          <div class="text-xs text-dark-gray font-semibold">
-            Entrega {method.name}
-          </div>
-          <div class="text-xs text-dark-gray font-semibold">
-            até {formatShippingEstimate(method.shippingEstimate)}
-          </div>
-          <div class="text-xs text-dark-gray font-semibold text-right">
-            {method.price === 0 ? "Grátis" : (
-              formatPrice(method.price / 100, "BRL", "pt-BR")
-            )}
-          </div>
-        </li>
-      ))}
+      {methods.map((method) => {
+        const {
+          shippingEstimateDate
+        } = method;
+
+        if (!shippingEstimateDate) return null;
+
+        const date = new Date(shippingEstimateDate);
+        const fdate = date.toLocaleDateString("pt-BR", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        });
+        
+        return (
+          <li class="grid grid-cols-4 border-base-200 not-first-child:border-t">
+            <div class="col-span-2 text-xs text-dark-gray font-semibold">
+              {method.name}
+            </div>
+            <div class="text-xs text-dark-gray font-semibold">
+              até {fdate}
+            </div>
+            <div class="text-xs text-dark-gray font-semibold text-right">
+              {method.price === 0 ? "Grátis" : (
+                formatPrice(method.price / 100, "BRL", "pt-BR")
+              )}
+            </div>
+          </li>
+        )
+      })}
       <span class="text-xs font-thin">
         Os prazos de entrega começam a contar a partir da confirmação do
         pagamento e podem variar de acordo com a quantidade de produtos na

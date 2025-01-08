@@ -6,6 +6,7 @@ import type { Product } from "apps/commerce/types.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import Price from "./Price.tsx";
 
 interface Props {
   product: Product;
@@ -63,38 +64,21 @@ function ProductSuggestionsCard({
         </a>
       </div>
       <div class="col-span-2">
-        <a href={relativeUrl} class="pt-5">
+        <a href={relativeUrl} class="flex flex-col gap-2 pt-5">
           {seller && inStock
             ? (
-              <p class="my-[5px] text-sm text-middle-gray capitalize">
+              <p class="text-sm text-middle-gray capitalize">
                 {seller}
               </p>
             )
-            : <span class="my-[5px]"></span>}
-          <p class="font-normal text-sm max-h-[63px] overflow-hidden">
+            : null
+          }
+          <p class="font-normal text-sm text-ellipsis font-bold line-clamp-2 h-10">
             {title}
           </p>
           {inStock
             ? (
-              <div class="flex gap-2 flex-col pt-2">
-                {listPrice && (
-                  <span class="line-through font-normal text-dark-gray text-sm">
-                    {formatPrice(listPrice, offers?.priceCurrency)}
-                  </span>
-                )}
-                <span class="font-semibold text-[20px] text-primary">
-                  {formatPrice(installment?.price)}{" "}
-                  <span class="text-primary font-normal text-base">
-                    no pix
-                  </span>
-                </span>
-                <span class="text-dark-gray text-xs">
-                  ou {installment?.billingDuration}x de {formatPrice(
-                    installment?.billingIncrement,
-                    offers!.priceCurrency!,
-                  )}
-                </span>
-              </div>
+              <Price type="shelf" product={product} />
             )
             : (
               <p class="flex text-center mt-2 justify-center font-semibold">
