@@ -22,10 +22,6 @@ export interface Banner {
   action?: {
     /** @description when user clicks on the image, go to this link */
     href?: string;
-    /** @description Image text title */
-    title?: string;
-    /** @description Image text subtitle */
-    subTitle?: string;
     /** @description Button label */
     label?: string;
   };
@@ -68,28 +64,6 @@ function BannerItem(
       aria-label={action?.label}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
-        <div
-          class={clx(
-            "absolute h-full w-full top-0 left-0",
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-          )}
-        >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="bg-white hover:bg-primary px-[50px] py-[10px] text-black hover:text-white ease-in duration-300 rounded-full absolute bottom-[20px]"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
-        </div>
-      )}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"

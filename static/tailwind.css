@@ -3692,9 +3692,6 @@ details.collapse summary::-webkit-details-marker {
 .bottom-6 {
   bottom: 1.5rem;
 }
-.bottom-\[20px\] {
-  bottom: 20px;
-}
 .left-0 {
   left: 0px;
 }
@@ -5221,10 +5218,6 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 35px;
   padding-right: 35px;
 }
-.px-\[50px\] {
-  padding-left: 50px;
-  padding-right: 50px;
-}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -5320,9 +5313,6 @@ details.collapse summary::-webkit-details-marker {
 .py-\[8\.5px\] {
   padding-top: 8.5px;
   padding-bottom: 8.5px;
-}
-.pb-12 {
-  padding-bottom: 3rem;
 }
 .pb-14 {
   padding-bottom: 3.5rem;
@@ -6461,11 +6451,6 @@ details>summary::marker {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-primary:hover {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
-}
-
 .hover\:bg-sky-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(56 189 248 / var(--tw-bg-opacity));
@@ -6482,11 +6467,6 @@ details>summary::marker {
 .hover\:text-accent-content:hover {
   --tw-text-opacity: 1;
   color: var(--fallback-ac,oklch(var(--ac)/var(--tw-text-opacity)));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
