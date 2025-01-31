@@ -21,6 +21,15 @@
             "label": "Confira"
           },
           "mobile": "https://placehold.co/640x800"
+        },
+        {
+          "desktop": "https://placehold.co/1920x720/",
+          "alt": "/",
+          "action": {
+            "href": "/",
+            "label": "Confira"
+          },
+          "mobile": "https://placehold.co/640x800"
         }
       ],
       "preload": true
@@ -255,16 +264,16 @@
         "cta": "Confira",
         "hideLabel": true,
         "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
-            "sort": "price:desc",
-            "count": 12,
-            "fuzzy": "automatic",
-            "query": "152"
+            "productIds": [],
+            "sort": "OrderByPriceDESC",
+            "count": 20,
+            "collection": "137"
           }
         },
         "displayOfferTag": true,
-        "expireAt": "2015-02-01T01:59:00.000Z"
+        "expireAt": "2025-03-21T13:00:00.000Z"
       }
     },
     {
@@ -272,18 +281,18 @@
       "size": "medium"
     },
     {
-      "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
-      "Label": "Lorem ipsum lorem lorem ipsum lorem lorem ipsum dolor ist lorem ipsum",
-      "product": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": {
-          "__resolveType": "website/functions/requestToParam.ts",
-          "param": "/tomada-antena-tv-coaxial-orion-–-schneider-14172/p"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
+        "product": {
+          "__resolveType": "vtex/loaders/legacy/productDetailsPage.ts",
+          "slug": "fechadura-digital-smarteck-preta-cod--smbf1ps1---steck",
+          "similars": false
         },
-        "similars": false
-      },
-      "expireAt": "2025-02-01T02:59:00.000Z",
-      "Title": "<p><strong>Oferta</strong> Relâmpago</p>"
+        "Title": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://sites-allever-store--main.decocdn.com/placa-2x4-para-1-modulo-horizontal-com-suporte-ilus-%E2%80%93-siemens-489/p?skuId=539\"><strong>Oferta</strong> Relâmpago</a></p>",
+        "expireAt": "2025-03-21T13:00:00.000Z",
+        "Label": " "
+      }
     },
     {
       "__resolveType": "site/sections/Spacer.tsx",
@@ -350,8 +359,9 @@
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "term": "tv",
-          "count": 6,
-          "query": "tv"
+          "sort": "",
+          "collection": "157",
+          "count": 12
         }
       }
     },
@@ -401,7 +411,8 @@
           "Loading": "eager",
           "desktop": {
             "Width": 1410,
-            "Height": 439
+            "Height": 439,
+            "Image": "https://data.decoassets.com/eletrotrafo/00586578-8b69-4271-83de-4f4540c6bbd2/(13)-Carrossel-II-1410x439-(corrigido)-1un.png"
           },
           "mobile": {
             "Width": 317,
@@ -440,11 +451,10 @@
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
-          "sort": "price:asc",
-          "query": "fone de ouvido",
+          "sort": "price:desc",
           "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
+          "term": "156",
+          "collection": "156"
         }
       },
       "title": "Vitrine 1",
@@ -512,13 +522,13 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "__resolveType": "vtex/loaders/legacy/productList.ts",
         "props": {
           "query": "fone de ouvido",
-          "sort": "price:asc",
+          "sort": "OrderByReleaseDateDESC",
           "count": 12,
           "fuzzy": "automatic",
-          "term": "tv"
+          "collection": "143"
         }
       }
     },
@@ -533,11 +543,10 @@
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
-          "query": "fone de ouvido",
-          "sort": "price:asc",
+          "sort": "price:desc",
           "count": 12,
-          "fuzzy": "automatic",
-          "term": "tv"
+          "term": "tv",
+          "collection": "140"
         }
       }
     },
