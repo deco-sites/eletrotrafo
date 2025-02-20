@@ -223,7 +223,10 @@
       "layout": "Categoria",
       "visibleItems": 8,
       "categories": [
-        {},
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/557a3f35-e382-4e12-ab27-a7adbb928aed/AUTOMACAO.png",
+          "label": "Automação"
+        },
         {},
         {},
         {},
@@ -264,10 +267,10 @@
         "cta": "Confira",
         "hideLabel": true,
         "products": {
-          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
           "props": {
             "productIds": [],
-            "sort": "OrderByPriceDESC",
+            "sort": "price:desc",
             "count": 20,
             "collection": "137"
           }
@@ -285,9 +288,8 @@
       "section": {
         "__resolveType": "site/sections/Content/ShowCaseCounter.tsx",
         "product": {
-          "__resolveType": "vtex/loaders/legacy/productDetailsPage.ts",
-          "slug": "fechadura-digital-smarteck-preta-cod--smbf1ps1---steck",
-          "similars": false
+          "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+          "slug": "lavadora-re-150-0-220v-stihl-c-carrinho-re01-011-4513-15323016"
         },
         "Title": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://sites-allever-store--main.decocdn.com/placa-2x4-para-1-modulo-horizontal-com-suporte-ilus-%E2%80%93-siemens-489/p?skuId=539\"><strong>Oferta</strong> Relâmpago</a></p>",
         "expireAt": "2025-03-21T13:00:00.000Z",
@@ -522,10 +524,10 @@
       "title": "Vitrine 1",
       "cta": "#",
       "products": {
-        "__resolveType": "vtex/loaders/legacy/productList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "query": "fone de ouvido",
-          "sort": "OrderByReleaseDateDESC",
+          "sort": "price:asc",
           "count": 12,
           "fuzzy": "automatic",
           "collection": "143"
