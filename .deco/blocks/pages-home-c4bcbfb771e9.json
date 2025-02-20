@@ -227,14 +227,38 @@
           "image": "https://data.decoassets.com/eletrotrafo/557a3f35-e382-4e12-ab27-a7adbb928aed/AUTOMACAO.png",
           "label": "Automação"
         },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/5db12c21-b1d3-49a1-8c9e-0e404f9499a2/CABOS-E-FIOS.png",
+          "label": "Cabos e Fios"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/612857d2-4d03-4ff0-93c1-3d2bec494b82/ENERGIA-SOLAR.png",
+          "label": "Energia Solar"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/5f964ac5-2a0d-4d67-9add-7cd20d7ecc17/FERRAMENTAS.png",
+          "label": "Ferramentas"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/52dd5f5b-9edf-4bbe-bc45-3890644feb8c/ILUMINACAO.png",
+          "label": "Iluminação"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/7cf9cb3b-c195-49e1-8b15-f78bbd772f39/INTERRUPTORES-E-TOMADAS.png",
+          "label": "Interruptores e Tomadas"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/358ab436-bd75-45ce-b01e-7ba4e5f77706/MEDIA-TENSAO.png",
+          "label": "Média Tensão"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/dc508e9f-ce29-4208-aa3b-12d9520d14d5/MOTORES-E-MOTOBOMBAS.png",
+          "label": "Motores e Motobombas"
+        },
+        {
+          "image": "https://data.decoassets.com/eletrotrafo/03b34aaa-53dc-4be4-8fca-7168789a5dd6/PROMOCOES.png",
+          "label": "Promoções"
+        },
         {}
       ]
     },
