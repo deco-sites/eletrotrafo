@@ -110,7 +110,7 @@ function ProductRecommendations({
           Você também pode <b class="text-primary">[Gostar]</b>
         </span>
       </div>
-      <div class="flex flex-row max-lg:overflow-x-auto lg:flex-col gap-4 lg:overflow-y-auto lg:max-h-[calc(100vh-129px)] px-5 lg:px-12 pt-5 pb-8 lg:py-5">
+      <div class="flex flex-row max-lg:overflow-x-auto lg:flex-col gap-4 lg:overflow-y-auto lg:max-h-[calc(100vh-150px)] h-full px-5 lg:px-12 pt-5 pb-8 lg:py-5">
         {recommendations.map((item: Product, index: number) => (
           <ProductCard
             key={index}
@@ -244,7 +244,7 @@ export default function Cart(
               </div>
             )
             : (
-              <>
+              <div class="h-[100vh]"> 
                 <ul
                   role="list"
                   class="p-5 overflow-y-auto flex flex-col gap-2 w-full overflow-y-auto flex-grow"
@@ -332,7 +332,7 @@ export default function Cart(
                     </label>
                   </div>
                 </footer>
-              </>
+              </div>
             )}
         </div>
       </form>

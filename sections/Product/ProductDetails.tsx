@@ -100,6 +100,9 @@ export default function ProductDetails({
       isVariantOf,
       additionalProperty: productProperties,
     } = product;
+
+    console.log("variant", isVariantOf);
+
     const itsForAdults = productProperties?.find((p) =>
       p.value === "Maior de 18"
     ) || null;
@@ -108,6 +111,19 @@ export default function ProductDetails({
     const image = front?.url || "";
     const device = isMobile ? "mobile" : "desktop";
     const { additionalProperty = [] } = isVariantOf ?? {};
+
+    const groupedProperties = isVariantOf?.additionalProperty.reduce<
+      Record<string, string[]>
+    >(
+      (acc, property) => {
+        if (!acc[property.name]) {
+          acc[property.name] = [];
+        }
+        acc[property.name].push(property.value);
+        return acc;
+      },
+      {},
+    );
     return (
       <>
         {itsForAdults !== null && (
@@ -191,13 +207,18 @@ export default function ProductDetails({
                 </div>
               }
             >
-              <div class="mb-5 w-full">
-                {isVariantOf?.additionalProperty.map((property) => (
-                  <div class="px-3 py-2 w-full text-sm sm:text-base odd:bg-middle-gray">
-                    <span class="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
-                      {property.name}
+              <div className="mb-5 w-full">
+                {Object.entries(groupedProperties || {}).map((
+                  [name, values],
+                ) => (
+                  <div
+                    key={name}
+                    className="px-3 py-2 w-full text-sm sm:text-base odd:bg-middle-gray"
+                  >
+                    <span className="font-semibold after:content-[':'] max-sm:pb-0 mr-2">
+                      {name}
                     </span>
-                    {property.value}
+                    {values.join(", ")}
                   </div>
                 ))}
               </div>

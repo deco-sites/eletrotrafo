@@ -10,6 +10,8 @@ import { rgb24 } from "std/fmt/colors.ts";
 import manifest, { type Manifest } from "../manifest.gen.ts";
 import type { Config } from "apps/vtex/loaders/config.ts";
 import { type App as A, type AppContext as AC } from "@deco/deco";
+
+
 export type Props = {
   /**
    * @title Flags de Novidades

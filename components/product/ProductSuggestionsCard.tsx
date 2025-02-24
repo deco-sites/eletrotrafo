@@ -65,14 +65,14 @@ function ProductSuggestionsCard({
       </div>
       <div class="col-span-2">
         <a href={relativeUrl} class="flex flex-col gap-2 pt-5">
-          {seller && inStock
+          {/* {seller && inStock
             ? (
               <p class="text-sm text-middle-gray capitalize">
                 {seller}
               </p>
             )
             : null
-          }
+          } */}
           <p class="font-normal text-sm text-ellipsis font-bold line-clamp-2 h-10">
             {title}
           </p>

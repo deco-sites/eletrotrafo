@@ -18,6 +18,8 @@ import { useScript } from "@deco/deco/hooks";
 import { getFlagCluster } from "./ProductCard.tsx";
 import Icon from "../ui/Icon.tsx";
 import Price from "./Price.tsx";
+import SelectedVariantNames from "./SelectedVariantNames.tsx";
+import TeasersComponent from "./TeaserName.tsx";
 interface Props {
   page: ProductDetailsPage | null;
   flags?: [internationalFlag: string, promoFlag: string, newsFlag: string] | [];
@@ -195,7 +197,7 @@ function ProductInfo({
     price = 0,
     listPrice = 0,
     seller = "1",
-    sellerName = "",
+    sellerName,
     inventory = 0,
     installment,
     availability,
@@ -250,9 +252,7 @@ function ProductInfo({
         <MeasurementTable image={measurementTableImage} />
         <div class="flex flex-col gap-3 px-5 pt-5">
           <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
-          <h1 class="text-base font-semibold">
-            {title}
-          </h1>
+          <SelectedVariantNames product={product} />
           <div class="flex items-center justify-between">
             <p class="text-dark-gray m-0 text-xs">
               Cod: {model} | {brand?.name}
@@ -292,6 +292,7 @@ function ProductInfo({
           <GallerySlider page={page} />
           <div class="flex justify-between">
             <div class="w-full max-w-[151px]">
+              <TeasersComponent page={page} context="product-details"/> 
               {hasNewsFlag &&
                 (
                   <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full">
@@ -338,7 +339,7 @@ function ProductInfo({
                     />
                     <p class="text-xs font-normal text-black">
                       Vendido e entregue por:{" "}
-                      <span class="font-bold capitalize">{sellerName}</span>
+                      <span class="font-bold capitalize">{seller}</span>
                     </p>
                   </div>
                   {newOffers.length > 0 &&
@@ -420,9 +421,7 @@ function ProductInfo({
               />
               <div class="flex flex-col gap-3 border border-x-0 border-y-dark-gray py-6">
                 <div class="flex items-center gap-4">
-                  <h1 class="text-xl font-bold flex-grow">
-                    {title}
-                  </h1>
+                <SelectedVariantNames product={product} />
                   <div
                     data-trustvox-product-code={productGroupID}
                   />
@@ -443,12 +442,13 @@ function ProductInfo({
                     Compartilhe
                   </button>
                 </div>
-                {hasNewsFlag &&
+                <TeasersComponent page={page} context="product-details"/> 
+                {/* {hasNewsFlag &&
                   (
                     <p class="text-xs font-semibold text-white uppercase bg-[#FFA318] text-center text-white px-2 py-1 rounded-full max-w-40">
                       Novidade
                     </p>
-                  )}
+                  )} */}
               </div>
               {availability === "https://schema.org/InStock" &&
                 (
