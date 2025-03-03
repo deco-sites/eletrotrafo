@@ -271,6 +271,27 @@
       "banners": [
         {
           "image": {
+            "desktop": "https://data.decoassets.com/eletrotrafo/8258a589-ee4d-4d9e-a0ce-3ed18f01d2ee/1-(5).png",
+            "mobile": "https://data.decoassets.com/eletrotrafo/be67967c-f117-43a6-81c2-77bb323d27e4/2.png"
+          },
+          "matcher": "/"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/eletrotrafo/29c31964-cd32-42b6-b21c-2fcb6dfd100a/2-(7).png",
+            "mobile": "https://data.decoassets.com/eletrotrafo/b7fb234f-0e82-4b27-80ff-758a66abb9ad/3.png"
+          },
+          "matcher": "/automacao"
+        },
+        {
+          "image": {
+            "desktop": "https://data.decoassets.com/eletrotrafo/f8724a0a-380c-49ba-aab0-5769b083a3ec/3-(1).png",
+            "mobile": "https://data.decoassets.com/eletrotrafo/2849927b-41fe-44fb-9290-e57556c60605/1.png"
+          },
+          "matcher": "/"
+        },
+        {
+          "image": {
             "desktop": "https://placehold.co/1920x380/",
             "mobile": "https://placehold.co/640x504",
             "alt": "banner 100% de marca x"
