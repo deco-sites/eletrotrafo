@@ -85,7 +85,7 @@ function Sort({ sortOptions, url }: Props) {
       selectedLabel = "Maior desconto";
       break;
     default:
-      selectedLabel = "Ordenar por";
+      selectedLabel = "Relevância";
   }
 
   return (

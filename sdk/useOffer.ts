@@ -61,6 +61,8 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const pix = offer?.priceSpecification.find((spec: UnitPriceSpecification) => {
     return spec.name === "Pix";
   })?.price || 0;
+
+  // console.log(offer)
   const inventory = offer?.inventoryLevel?.value;
   const seller = offer?.seller;
   const price = offer?.price;

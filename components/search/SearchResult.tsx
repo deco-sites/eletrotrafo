@@ -315,10 +315,6 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="grid grid-cols-1 sm:grid-cols-[250px_1fr] gap-12 container px-5">
                 {device === "desktop" && (
                   <aside class="place-self-start flex flex-col w-full">
-                    <span class="text-base lg:text-lg font-semibold pb-4 flex items-center border-b border-gray-300">
-                      Filtros
-                    </span>
-
                     <Filters filters={filters} />
                   </aside>
                 )}

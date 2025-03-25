@@ -265,6 +265,20 @@ details>summary::marker {
   -webkit-appearance: none;
 }
 
-.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled {
+.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled,
+.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-enabled {
   display: none !important;
+}
+
+.ts-shelf-container .ts-sprite {
+  background: url("https://allever.vtexassets.com/arquivos/stars.png") no-repeat 0 0 !important;
+}
+
+#product-page .ts-shelf-container .ts-sprite {
+  background: url("https://allever.vtexassets.com/arquivos/stars-cinza.png") no-repeat 0 0 !important;
+}
+
+.ts-shelf-container .ts-shelf-rate-symbols,
+#product-page .ts-shelf-container .ts-shelf-rate-symbols {
+  background-position: -23px 0  !important;
 }

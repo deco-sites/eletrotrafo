@@ -57,11 +57,12 @@ export default function GallerySlider(props: Props) {
           </button>
         </div>
 
+  
         <ul class="grid grid-cols-5 gap-3 lg:gap-2">
           {images.length > 1 && (<>
               {images.map((img, index) => (<li class="carousel-item">
-                  <Slider.Dot index={index} class="h-fit w-fit h-full rounded-2xl overflow-hidden">
-                    <Image class="rounded object-contain lg:object-cover lg:max-w-[148px] lg:max-h-[107px] bg-white rounded-[10px] lg:rounded-[20px]" width={device === "desktop" ? 148 : 60} height={device === "desktop" ? 107 : 60} src={img.url!} alt={img.alternateName}/>
+                  <Slider.Dot index={index} class="h-fit w-fit rounded-2xl overflow-hidden" width={device === "desktop" ? 80 : 60} height={device === "desktop" ? 80 : 60} >
+                    <Image class={`object-cover bg-white rounded-[10px] lg:rounded-[20px]`} src={img.url!} alt={img.alternateName}/>
                   </Slider.Dot>
                 </li>))}
             </>)}

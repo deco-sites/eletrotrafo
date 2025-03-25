@@ -19,8 +19,8 @@ export default function Price({
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;
-  console.log("percent", percent);
-  const hasPixDiscount = pix > 0 && pix < price;
+  // console.log("price", price, "listPrice", listPrice, "pix", pix );
+  const hasPixDiscount = pix;
 
   if (type === "shelf") {
     return (

@@ -866,14 +866,6 @@ html {
 .carousel-end .carousel-item {
   scroll-snap-align: end;
 }
-.chat {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
 .checkbox {
   flex-shrink: 0;
   --chkbg: var(--fallback-bc,oklch(var(--bc)/1));
@@ -4561,6 +4553,9 @@ details.collapse summary::-webkit-details-marker {
 .flex-row {
   flex-direction: row;
 }
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -4837,9 +4832,6 @@ details.collapse summary::-webkit-details-marker {
 .rounded-none {
   border-radius: 0px;
 }
-.rounded-sm {
-  border-radius: 0.125rem;
-}
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -5040,6 +5032,10 @@ details.collapse summary::-webkit-details-marker {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .bg-light-gray {
   --tw-bg-opacity: 1;
@@ -5327,6 +5323,9 @@ details.collapse summary::-webkit-details-marker {
 .pb-14 {
   padding-bottom: 3.5rem;
 }
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -5365,6 +5364,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pl-4 {
   padding-left: 1rem;
+}
+.pl-5 {
+  padding-left: 1.25rem;
 }
 .pl-\[10px\] {
   padding-left: 10px;
@@ -5667,6 +5669,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
 }
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
 .text-secondary {
   --tw-text-opacity: 1;
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
@@ -5724,6 +5730,11 @@ details.collapse summary::-webkit-details-marker {
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-sm {
@@ -6083,8 +6094,22 @@ details>summary::marker {
   -webkit-appearance: none;
 }
 
-.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled {
+.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-disabled,
+.ts-shelf-right.ts-shelf-rate-count.ts-shelf-rate-enabled {
   display: none !important;
+}
+
+.ts-shelf-container .ts-sprite {
+  background: url("https://allever.vtexassets.com/arquivos/stars.png") no-repeat 0 0 !important;
+}
+
+#product-page .ts-shelf-container .ts-sprite {
+  background: url("https://allever.vtexassets.com/arquivos/stars-cinza.png") no-repeat 0 0 !important;
+}
+
+.ts-shelf-container .ts-shelf-rate-symbols,
+#product-page .ts-shelf-container .ts-shelf-rate-symbols {
+  background-position: -23px 0  !important;
 }
 
 @media (min-width: 1024px) {
@@ -6764,10 +6789,6 @@ details>summary::marker {
     border-left-width: 1px;
   }
 
-  .sm\:p-0 {
-    padding: 0px;
-  }
-
   .sm\:p-10 {
     padding: 2.5rem;
   }
@@ -7056,10 +7077,6 @@ details>summary::marker {
     height: 100%;
   }
 
-  .lg\:max-h-\[107px\] {
-    max-height: 107px;
-  }
-
   .lg\:max-h-\[600px\] {
     max-height: 600px;
   }
@@ -7110,10 +7127,6 @@ details>summary::marker {
 
   .lg\:max-w-\[1094px\] {
     max-width: 1094px;
-  }
-
-  .lg\:max-w-\[148px\] {
-    max-width: 148px;
   }
 
   .lg\:max-w-\[210px\] {
@@ -7306,11 +7319,6 @@ details>summary::marker {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
-  .lg\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
   .lg\:p-0 {
     padding: 0px;
   }
@@ -7388,8 +7396,16 @@ details>summary::marker {
     padding-bottom: 0px;
   }
 
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
   .lg\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:text-left {
