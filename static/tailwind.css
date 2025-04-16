@@ -1810,18 +1810,6 @@ input.tab:checked + .tab-content,
   --tw-border-opacity: 1;
   border-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-border-opacity)));
 }
-.badge-primary {
-  --tw-border-opacity: 1;
-  border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
-  --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
-}
-.badge-outline.badge-primary {
-  --tw-text-opacity: 1;
-  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
-}
 .btm-nav > *:where(.\!active) {
   border-top-width: 2px !important;
   --tw-bg-opacity: 1 !important;
@@ -7536,19 +7524,19 @@ details>summary::marker {
   opacity: 0.6;
 }
 
-.is-scrolled .\[\.is-scrolled_\&\]\:border-white {
+.is-homepage:not(.is-scrolled) .\[\.is-homepage\:not\(\.is-scrolled\)_\&\]\:border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
 }
 
-.is-scrolled .\[\.is-scrolled_\&\]\:bg-white {
+.is-homepage:not(.is-scrolled) .\[\.is-homepage\:not\(\.is-scrolled\)_\&\]\:bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 
-.is-scrolled .\[\.is-scrolled_\&\]\:text-primary {
+.is-homepage:not(.is-scrolled) .\[\.is-homepage\:not\(\.is-scrolled\)_\&\]\:text-white {
   --tw-text-opacity: 1;
-  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 [data-aside].\[\[data-aside\]\&_section\]\:contents section {

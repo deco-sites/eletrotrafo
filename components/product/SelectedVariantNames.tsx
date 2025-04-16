@@ -1,27 +1,20 @@
 import type { Product } from "apps/commerce/types.ts";
-import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
-import { relative } from "../../sdk/url.ts";
 
 interface Props {
   product: Product;
 }
 
 const SelectedVariantNames = ({ product }: Props) => {
-  const possibilities = useVariantPossibilities(
-    product.isVariantOf?.hasVariant ?? [],
-    product,
-  );
-
-  const currentUrl = relative(product.url);
-
-  const selectedVariant = product.isVariantOf?.hasVariant.find(
-    (variant) => relative(variant.url) === currentUrl,
-  );
+  const baseName = product.isVariantOf?.name || "";
+  const complement = product.name?.replace(baseName, "") || "";
+  const completeName = `${baseName.trim()} ${complement.trim()}`;
 
   return (
-    <h1 class="text-base font-bold lg:text-xl flex-grow">
-      {selectedVariant?.alternateName ?? product.alternateName ?? null}
-    </h1>
+    <>
+      <h1 class="text-base font-bold lg:text-xl flex-grow">
+        {completeName}
+      </h1>
+    </>
   );
 };
 
