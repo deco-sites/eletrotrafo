@@ -130,7 +130,7 @@ export default function Price({
               {formatPrice(price, offers?.priceCurrency)}
             </span>
             {percent >= 1 && (
-              <span class="text-xs font-semibold text-white uppercase bg-primary text-center text-white px-2 py-1 rounded-full w-fit">
+              <span class="text-xs font-semibold text-white uppercase bg-primary text-center px-2 py-1 rounded-full w-fit">
                 {percent} % off
               </span>
             )}
